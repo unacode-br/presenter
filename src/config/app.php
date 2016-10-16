@@ -168,6 +168,7 @@ return [
          */
         Migrator\MigrationServiceProvider::class,
         Artesaos\Warehouse\WarehouseServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
         /**
          * Support Service Providers...
