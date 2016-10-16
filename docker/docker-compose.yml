@@ -10,8 +10,8 @@ services:
             args:
                 - INSTALL_MONGO=true
                 - INSTALL_XDEBUG=false
-                - INSTALL_NODE=false
-                - COMPOSER_GLOBAL_INSTALL=false
+                - INSTALL_NODE=true
+                - COMPOSER_GLOBAL_INSTALL=true
                 - PUID=1000
                 - PGID=1000
         volumes_from:
