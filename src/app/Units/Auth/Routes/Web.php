@@ -21,12 +21,6 @@ class Web extends RouteFile
         // Authentication routes.
         $this->authenticationRoutes();
 
-        // Registration routes.
-        $this->registrationRoutes();
-
-        // Password Reset routes.
-        $this->passwordResetRoutes();
-
         // Authentication Socialite
         $this->socialAuthRoutes();
     }
@@ -36,28 +30,13 @@ class Web extends RouteFile
     {
         $this->router->get('login', 'LoginController@showLoginForm')
             ->name('login');
-        $this->router->post('login', 'LoginController@login');
         $this->router->post('logout', 'LoginController@logout');
-    }
-
-    protected function registrationRoutes()
-    {
-        $this->router->get('register', 'RegisterController@showRegistrationForm');
-        $this->router->post('register', 'RegisterController@register');
-    }
-
-    protected function passwordResetRoutes()
-    {
-        $this->router->get('password/reset', 'ForgotPasswordController@showLinkRequestForm');
-        $this->router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
-        $this->router->get('password/reset/{token}', 'ResetPasswordController@showResetForm');
-        $this->router->post('password/reset', 'ResetPasswordController@reset');
     }
 
     protected function socialAuthRoutes()
     {
-      $this->router->get('/github', 'SocialAuthController@redirectToProvider');
-      $this->router->get('/githubredirect', 'SocialAuthController@handleProviderCallback');
+      $this->router->get('/auth/github', 'SocialAuthController@redirectToProvider');
+      $this->router->get('/auth/github/redirect', 'SocialAuthController@handleProviderCallback');
     }
 
 }
