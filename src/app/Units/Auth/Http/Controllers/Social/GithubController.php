@@ -19,21 +19,21 @@ class GithubController extends SocialController
 
     /**
      * Catch the user information from Github.
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function handleProviderCallback()
     {
         try {
             $user = Socialite::driver('github')->user();
         } catch (Exception $e) {
-            return Redirect::to('auth/github');
+            return redirect()->to('auth/github');
         }
 
         $authUser = $this->findOrCreateUser($user);
 
         Auth::login($authUser, true);
 
-        return view('home::home');
+        return redirect()->to('/home');
     }
 
     /**
