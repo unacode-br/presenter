@@ -35,8 +35,8 @@ class Web extends RouteFile
 
     protected function socialAuthRoutes()
     {
-      $this->router->get('/auth/github', 'SocialAuthController@redirectToProvider');
-      $this->router->get('/auth/github/redirect', 'SocialAuthController@handleProviderCallback');
+      $this->router->get('/auth/github', 'Social/GithubController@redirectToProvider');
+      $this->router->get('/auth/github/redirect', 'Social/GithubController@handleProviderCallback');
     }
 
 }
