@@ -5,11 +5,17 @@ namespace App\Domains\Users;
 use App\Domains\Users\Presenters\UserPresenter;
 use Codecasts\Presenter\Presentable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use Presentable, Notifiable;
+
+    /**
+     * The collection associated with the model.
+     *
+     * @var string
+     */
+    protected $collection = 'users';
 
     /**
      * @var string User Presenter class
