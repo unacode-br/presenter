@@ -26,7 +26,11 @@ class Web extends RouteFile
 
         // Password Reset routes.
         $this->passwordResetRoutes();
+
+        // Authentication Socialite
+        $this->socialAuthRoutes();
     }
+
 
     protected function authenticationRoutes()
     {
@@ -49,4 +53,11 @@ class Web extends RouteFile
         $this->router->get('password/reset/{token}', 'ResetPasswordController@showResetForm');
         $this->router->post('password/reset', 'ResetPasswordController@reset');
     }
+
+    protected function socialAuthRoutes()
+    {
+      $this->router->get('/github', 'SocialAuthController@redirectToProvider');
+      $this->router->get('/githubredirect', 'SocialAuthController@handleProviderCallback');
+    }
+
 }

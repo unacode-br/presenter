@@ -10,7 +10,8 @@
         "codecasts/support": "^1.0",
         "league/fractal": "^0.13.0",
         "predis/predis": "^1.1",
-        "jenssegers/mongodb": "^3.1"
+        "jenssegers/mongodb": "^3.1",
+        "laravel/socialite": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
