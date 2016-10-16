@@ -37,6 +37,10 @@ class Web extends RouteFile
     {
       $this->router->get('/auth/github', 'Social\GithubController@redirectToProvider');
       $this->router->get('/auth/github/redirect', 'Social\GithubController@handleProviderCallback');
+
+      $this->router->get('/auth/facebook', 'Social\FacebookController@redirectToProvider');
+      $this->router->get('/auth/facebook/redirect', 'Social\FacebookController@handleProviderCallback');
+
     }
 
 }
