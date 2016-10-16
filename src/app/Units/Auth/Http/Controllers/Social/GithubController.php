@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Units\Auth\Http\Controllers;
+namespace App\Units\Auth\Http\Controllers\Social;
 
 use Auth;
 use Socialite;
 use App\Domains\Users\User;
 
-class GithubController extends AuthController
+class GithubController extends SocialController
 {
     /**
      * Redirect to Github auth provider.

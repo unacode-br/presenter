@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Units\Auth\Http\Controllers;
+namespace App\Units\Auth\Http\Controllers\Social;
 
 use Codecasts\Support\Http\Controller;
 
-abstract class AuthController extends Controller
+abstract class SocialController extends Controller
 {
     public function redirectToProvider()
     {
