@@ -12,8 +12,13 @@
 
 h1, h2{
   margin-bottom: 40px;
+  color: $title-color;
 }
 
 #main{
   margin-top: 10%;
+}
+
+li > a, .navbar-default .navbar-brand{
+  color: $link-color !important;
 }
