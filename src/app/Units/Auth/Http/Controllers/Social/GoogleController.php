@@ -43,14 +43,17 @@ class GoogleController extends SocialController
      */
     private function findOrCreateUser($user)
     {
-        if ($authUser = User::where('google_id', $user->id)->first()) {
+        if ($authUser = User::where('provider', 'google')->where('provider_id', $user->id)->first()) {
             return $authUser;
         }
 
         return User::create([
-            'name'      => $user->name,
-            'email'     => $user->email,
-            'google_id' => $user->id,
+            'provider'    => 'google',
+            'name'        => $user->name,
+            'email'       => $user->email,
+            'provider_id' => $user->id,
+            'avatar'      => $user->avatar,
+            'extras'      => [],
         ]);
     }
 }

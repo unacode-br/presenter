@@ -43,14 +43,17 @@ class FacebookController extends SocialController
      */
     private function findOrCreateUser($user)
     {
-        if ($authUser = User::where('facebook_id', $user->id)->first()) {
+        if ($authUser = User::where('provider', 'facebook')->where('provider_id', $user->id)->first()) {
             return $authUser;
         }
 
         return User::create([
+            'provider'    => 'facebook',
             'name'        => $user->name,
             'email'       => $user->email,
-            'facebook_id' => $user->id,
+            'provider_id' => $user->id,
+            'avatar'      => $user->avatar,
+            'extras'      => [],
         ]);
     }
 }

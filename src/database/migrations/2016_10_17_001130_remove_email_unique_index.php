@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasswordResetsTable extends Migration
+class RemoveEmailUniqueIndex extends Migration
 {
     /**
      * @var \Illuminate\Database\Schema\Builder
@@ -24,10 +24,9 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
-        $this->schema->create('password_resets', function ($table) {
-            $table->index('email');
-            $table->index('token');
-            $table->timestamp('created_at');
+        $this->schema->table('users', function ($collection) {
+            $collection->dropIndex('email');
+            $collection->index('email');
         });
     }
 
@@ -38,6 +37,8 @@ class CreatePasswordResetsTable extends Migration
      */
     public function down()
     {
-        $this->schema->drop('password_resets');
+        $this->schema->table('users', function ($collection) {
+            $collection->unique('email');
+        });
     }
 }
