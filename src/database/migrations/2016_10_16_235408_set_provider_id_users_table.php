@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class SetProviderIdUsersTable extends Migration
 {
     /**
      * @var \Illuminate\Database\Schema\Builder
@@ -24,14 +24,8 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        $this->schema->create('users', function ($collection) {
-            $collection->increments('id');
-            $collection->index('name');
-            $collection->unique('email');
-            $collection->string('avatar', 250);
-            $collection->index('provider');
-            $collection->json('extras');
-            $collection->timestamps();
+        $this->schema->table('users', function ($collection) {
+            $collection->index('provider_id')->after('provider');
         });
     }
 
@@ -42,6 +36,8 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        $this->schema->drop('users');
+        $this->schema->table('users', function ($collection) {
+            $collection->dropIndex('provider_id');
+        });
     }
 }

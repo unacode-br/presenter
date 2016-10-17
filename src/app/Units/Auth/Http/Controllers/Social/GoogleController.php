@@ -9,7 +9,8 @@ use App\Domains\Users\User;
 class GoogleController extends SocialController
 {
     /**
-     * Redireciona à pagina de autenticação
+     * Redirect to Google auth provider.
+     * @return mixed
      */
     public function redirectToProvider()
     {
@@ -17,37 +18,42 @@ class GoogleController extends SocialController
     }
 
     /**
-     * Pega as informações do Google
+     * Catch the user information from Google.
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function handleProviderCallback()
     {
-      try {
-          $user = Socialite::driver('google')->user();
-      } catch (Exception $e) {
-          return Redirect::to('auth/google');
-      }
+        try {
+            $user = Socialite::driver('google')->user();
+        } catch (Exception $e) {
+            return redirect()->to('auth/google');
+        }
 
-      $authUser = $this->findOrCreateUser($user);
+        $authUser = $this->findOrCreateUser($user);
 
-      Auth::login($authUser, true);
+        Auth::login($authUser, true);
 
-      return view('home::home');
+        return redirect()->to('/home');
     }
 
     /**
-     *Se existir retorna o Usuario.
-     *Se não existir cria usuario
+     * Find an existing user or create one.
+     * @param $user
+     * @return static
      */
-    private function findOrCreateUser($googleUser)
+    private function findOrCreateUser($user)
     {
-        if ($authUser = User::where('google_id', $googleUser->id)->first()) {
+        if ($authUser = User::where('provider', 'google')->where('provider_id', $user->id)->first()) {
             return $authUser;
         }
 
         return User::create([
-            'name' => $googleUser->name,
-            'email' => $googleUser->email,
-            'google_id' => $googleUser->id,
+            'provider'    => 'google',
+            'name'        => $user->name,
+            'email'       => $user->email,
+            'provider_id' => $user->id,
+            'avatar'      => $user->avatar,
+            'extras'      => [],
         ]);
     }
 }

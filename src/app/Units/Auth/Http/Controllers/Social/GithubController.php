@@ -43,15 +43,17 @@ class GithubController extends SocialController
      */
     private function findOrCreateUser($user)
     {
-        if ($authUser = User::where('github_id', $user->id)->first()) {
+        if ($authUser = User::where('provider', 'github')->where('provider_id', $user->id)->first()) {
             return $authUser;
         }
 
         return User::create([
-            'name'      => $user->name,
-            'email'     => $user->email,
-            'github_id' => $user->id,
-            'avatar'    => $user->avatar,
+            'provider'    => 'github',
+            'name'        => $user->name,
+            'email'       => $user->email,
+            'provider_id' => $user->id,
+            'avatar'      => $user->avatar,
+            'extras'      => [],
         ]);
     }
 }
