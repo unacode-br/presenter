@@ -1,71 +1,28 @@
 @extends('core::layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-      <a href="{{ url('/auth/github')}}">Github</a>
-      <a href="{{ url('/auth/facebook')}}">Facebook</a>
-      <a href="{{ url('/auth/google')}}">Google</a>
-        <div class="col-md-4 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+  <div class="container" id="main">
+    <div class="row vdivide">
+      <div class="col-sm-6 text-center">
+        <h2><strong>Stack</strong><small>Hub</small></h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h1>Login</h1>
+        <div class="col-md-6 col-md-offset-3">
+          <a href="{{ url('/auth/github') }}" class="btn btn-block btn-social btn-github">
+            <span class="fa fa-github"></span> Login com Github
+          </a>
+          <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-social btn-facebook">
+            <span class="fa fa-facebook"></span> Login com Facebook
+          </a>
+          <a href="{{ url('/auth/google') }}"  class="btn btn-block btn-social btn-google">
+            <span class="fa fa-google"></span> Login com Google
+          </a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 @endsection

@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
         $this->schema->create('users', function ($collection) {
             $collection->increments('id');
             $collection->index('name');
-            $collection->string('email');
+            $collection->unique('email');
             $collection->string('avatar');
 
             $collection->rememberToken();
