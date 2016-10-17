@@ -79,7 +79,7 @@
     @yield('content')
     <footer class="text-center">
       <div class="credito">
-        <span>Feito com <div class="heart">&#10084;</div> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
+        <span>Feito com <span class="heart">&#10084;</span> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
       </div>
     </footer>
     <!-- Scripts -->
