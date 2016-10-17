@@ -5,6 +5,7 @@
     <div class="row">
       <a href="{{ url('/auth/github')}}">Github</a>
       <a href="{{ url('/auth/facebook')}}">Facebook</a>
+      <a href="{{ url('/auth/google')}}">Google</a>
         <div class="col-md-4 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
