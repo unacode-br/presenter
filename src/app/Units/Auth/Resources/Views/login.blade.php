@@ -11,7 +11,7 @@
       </div>
       <div class="col-sm-6 text-center ">
         <h1 class="hidden-xs">Login</h1>
-        <h3 class="hidden-md">Login</h3>
+        <h3 class="hidden-md hidden-lg">Login</h3>
       </br>
         <div class="col-md-6 col-md-offset-3">
           <a href="{{ url('/auth/github') }}" class="btn btn-block btn-social btn-github">
