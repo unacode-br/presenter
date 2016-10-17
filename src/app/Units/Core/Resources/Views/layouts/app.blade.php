@@ -77,7 +77,11 @@
     </nav>
 
     @yield('content')
-
+    <footer class="text-center">
+      <div class="credito">
+        <span>Feito com <heart>&#10084;</heart> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
+      </div>
+    </footer>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>

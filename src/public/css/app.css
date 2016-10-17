@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6633,8 +6632,12 @@ button.close {
     color: #720e9e;
     background-color: #fff; }
 
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300; }
+
 .row.vdivide > [class*='col-']:not(:last-child):after {
-  background: #e0e0e0;
+  background: #B1BDCD;
   width: 1px;
   content: "";
   display: block;
@@ -6653,5 +6656,19 @@ h1, h2 {
 
 li > a, .navbar-default .navbar-brand {
   color: #E7EBF0 !important; }
+
+heart {
+  color: #660F57; }
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 65px;
+  width: 100%;
+  background: #B1BDCD; }
+
+.credito {
+  padding: 5px; }
 
 /*# sourceMappingURL=app.css.map */
