@@ -35,7 +35,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <strong>Stack</strong><small>hub</small>
+                    <strong>Stack</strong><small>Hub</small>
                 </a>
             </div>
 
@@ -79,7 +79,7 @@
     @yield('content')
     <footer class="text-center">
       <div class="credito">
-        <span>Feito com <heart>&#10084;</heart> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
+        <span>Feito com <div class="heart">&#10084;</div> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
       </div>
     </footer>
     <!-- Scripts -->
