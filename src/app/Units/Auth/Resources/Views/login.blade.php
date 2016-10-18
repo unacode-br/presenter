@@ -1,4 +1,4 @@
-@extends('core::layouts.app')
+@extends('core::template.layout.app')
 
 @section('content')
   <div class="container" id="main">

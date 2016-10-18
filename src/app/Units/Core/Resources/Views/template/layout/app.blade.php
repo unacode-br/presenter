@@ -48,9 +48,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                    @else
+                    @if (Auth::user())
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -75,8 +73,16 @@
             </div>
         </div>
     </nav>
-
-    @yield('content')
+    <div class="container-fluid">
+      <div class="row">
+          @if (Auth::user())
+            @include('core::template.snippets.sidebar')
+          @endif
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            @yield('content')
+          </div>
+      </div>
+    </div>
     <footer class="text-center">
       <div class="credito">
         <span>Feito com <span class="heart">&#10084;</span> pela equipe Unacode!</span></br><span> Todos os Direitos Reservados.</span>
