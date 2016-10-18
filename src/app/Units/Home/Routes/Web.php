@@ -23,9 +23,8 @@ class Web extends RouteFile
         });
 
         $this->router->get('/home', 'HomeController@index');
-        $this->router->get('/graphicstar', 'GraphicsController@showGraphicsStars' );
-        $this->router->get('/graphicfork', 'GraphicsController@showGraphicsForks' );
-
+        $this->router->get('/graphics/stars', 'GraphicsController@showGraphicsStars');
+        $this->router->get('/graphics/forks', 'GraphicsController@showGraphicsForks');
     }
 
 }
