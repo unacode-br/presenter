@@ -6,7 +6,7 @@
       <div class="col-sm-6 text-center">
         <h2><strong>Stack</strong><small>Hub</small></h2>
         <p class="hidden-xs">
-          StackHub é uma ferramenta de data mining que mostrará ao usuário informaçõs acerca das tecnologias mais utilizadas no Github e StackOverflow. Ela mostrará o uso e o aprendizado dessas tecnologias, para que os usuários possam, através dessas informações, escolherem qual será a próxima tecnologia que vale a pena investir!
+          StackHub é uma ferramenta de data mining que mostrará ao usuário informaçõs acerca das tecnologias mais utilizadas no Github e StackOverflow. Ela mostrará o uso e o aprendizado dessas tecnologias, para que os usuários possam através dessas informações, escolherem qual será a próxima tecnologia que vale a pena investir!
         </p>
       </div>
       <div class="col-sm-6 text-center ">
