@@ -15,8 +15,5 @@ require('laravel-elixir-vue');
 
 elixir(mix => {
     mix.sass('app.scss')
-        .webpack('app.js')
-        .scripts([
-            'highcharts/forks.js'
-        ], 'public/js/highcharts/charts.js');
+        .webpack('app.js');
 });
