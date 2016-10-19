@@ -63,7 +63,7 @@ class Trend extends Model
      */
     public static function getMostForkedRepositories($limit = 10)
     {
-        Trend::orderBy('forks', 'desc')
+        return Trend::orderBy('forks', 'desc')
             ->take($limit)
             ->get([
                 'repository',
