@@ -2,6 +2,7 @@
 
 namespace App\Units\Home\Http\Controllers;
 
+use App\Domains\Trends\Trend;
 use Codecasts\Support\Http\Controller;
 
 /**
@@ -12,12 +13,16 @@ class GraphicsController extends Controller
 
     public function showGraphicsStars()
     {
-        return view('home::Graphics.Trends.stars');
+        $repositories = Trend::getMostStaredRepositories();
+
+        return view('home::Graphics.Trends.stars', compact(['repositories']));
     }
 
     public function showGraphicsForks()
     {
-        return view('home::Graphics.Trends.forks');
+        $repositories = Trend::getMostForkedRepositories();
+
+        return view('home::Graphics.Trends.forks', compact(['repositories']));
     }
 
 }
