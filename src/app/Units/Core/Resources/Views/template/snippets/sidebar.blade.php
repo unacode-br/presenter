@@ -11,7 +11,7 @@
             <li {!! request()->route()->getName() == 'dashboard' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/home') }}">
                     <i class="fa fa-dashboard"></i>
-                    <p>Dashboard</p>
+                    <p>Início</p>
                 </a>
             </li>
             <li {!! request()->route()->getName() == 'trends.stars' ? 'class="active"' : '' !!}>
