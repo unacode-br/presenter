@@ -22,9 +22,9 @@ class Web extends RouteFile
             return view('home::welcome');
         });
 
-        $this->router->get('/home', 'HomeController@index');
-        $this->router->get('/graphics/stars', 'GraphicsController@showGraphicsStars');
-        $this->router->get('/graphics/forks', 'GraphicsController@showGraphicsForks');
+        $this->router->get('/home', 'HomeController@index')->name('dashboard');
+        $this->router->get('/graphics/stars', 'GraphicsController@showGraphicsStars')->name('trends.stars');
+        $this->router->get('/graphics/forks', 'GraphicsController@showGraphicsForks')->name('trends.forks');
     }
 
 }
