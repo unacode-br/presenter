@@ -6,9 +6,7 @@
         <hr>
     </div>
     <div class="row">
-        <div class="col-sm-8 col-md-8 panel">
-            <div id="forks"></div>
-        </div>
+      <div id="forks"></div>
     </div>
 @endsection
 
