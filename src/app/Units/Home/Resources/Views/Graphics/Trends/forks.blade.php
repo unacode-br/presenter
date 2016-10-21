@@ -1,13 +1,16 @@
 @extends('core::template.layout.app')
 
 @section('content')
-    <div class="row">
-        <h3 class="text-center">Github Trends by Forks</h3>
-        <hr>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <h3 class="text-center">Github Trends by Forks</h3>
+            <div class="row">
+                <div id="forks"></div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-        <div id="forks"></div>
-    </div>
+</div>
 @endsection
 
 @section('scripts')
