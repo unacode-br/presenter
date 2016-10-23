@@ -8572,7 +8572,7 @@ hr {
 
 .btn,
 .navbar .navbar-nav > li > a.btn {
-  border-radius: 20px;
+  border-radius: 4px;
   box-sizing: border-box;
   border-width: 2px;
   background-color: transparent;
@@ -9020,7 +9020,7 @@ hr {
 
 .btn-lg, .btn-group-lg > .btn {
   font-size: 18px;
-  border-radius: 50px;
+  border-radius: 8px;
   padding: 10px 16px;
   font-weight: 400; }
   .btn-lg.btn-simple, .btn-group-lg > .btn-simple.btn {
@@ -9028,14 +9028,14 @@ hr {
 
 .btn-sm, .btn-group-sm > .btn {
   font-size: 12px;
-  border-radius: 26px;
+  border-radius: 2px;
   padding: 5px 10px; }
   .btn-sm.btn-simple, .btn-group-sm > .btn-simple.btn {
     padding: 7px 10px; }
 
 .btn-xs, .btn-group-xs > .btn {
   font-size: 12px;
-  border-radius: 26px;
+  border-radius: 2px;
   padding: 1px 5px; }
   .btn-xs.btn-simple, .btn-group-xs > .btn-simple.btn {
     padding: 3px 5px; }
