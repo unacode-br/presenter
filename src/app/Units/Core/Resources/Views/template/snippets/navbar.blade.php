@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::user())
                         <li class="dropdown">
