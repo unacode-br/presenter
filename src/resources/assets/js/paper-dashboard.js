@@ -22,7 +22,7 @@ $(window).resize(function(){
     }
 });
 
-lbd = {
+var lbd = {
     misc:{
         navbar_menu_visible: 0
     },

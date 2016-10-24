@@ -1,8 +1,8 @@
-<div class="sidebar" data-background-color="white" data-active-color="danger">
+<div class="sidebar" data-background-color="cinza" data-active-color="primary">
     <div class="sidebar-wrapper">
           <div class="logo">
               <a href="{{ url('/') }}" class="simple-text">
-                Stackhub
+                  <strong>Stackhub</strong>
               </a>
           </div>
           <ul class="nav">
