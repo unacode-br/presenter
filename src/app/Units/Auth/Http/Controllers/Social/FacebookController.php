@@ -5,6 +5,9 @@ namespace App\Units\Auth\Http\Controllers\Social;
 use Auth;
 use Socialite;
 use App\Domains\Users\User;
+use App\Domains\Users\Mails\SendMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FacebookController extends SocialController
 {
@@ -47,7 +50,7 @@ class FacebookController extends SocialController
             return $authUser;
         }
 
-        return User::create([
+        $user = User::create([
             'provider'    => 'facebook',
             'name'        => $user->name,
             'email'       => $user->email,
@@ -55,5 +58,9 @@ class FacebookController extends SocialController
             'avatar'      => $user->avatar,
             'extras'      => [],
         ]);
+
+         Mail::to($user)->send(new SendMail($user));
+
+        return $user;
     }
 }
