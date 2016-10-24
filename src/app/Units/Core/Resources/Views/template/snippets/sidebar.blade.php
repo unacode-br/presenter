@@ -1,19 +1,29 @@
 <div class="sidebar" data-background-color="white" data-active-color="danger">
     <div class="sidebar-wrapper">
           <div class="logo">
-              <a href="http://www.creative-tim.com" class="simple-text">
-                  Creative Tim
+              <a href="{{ url('/') }}" class="simple-text">
+                Stackhub
               </a>
           </div>
-
           <ul class="nav">
-              <li class="active">
-                  <a href="dashboard.html">
-                      <i class="ti-pie-chart"></i>
-                      <p>Dashboard</p>
-                  </a>
-              </li>
-
-          </ul>
+          <li {!! request()->route()->getName() == 'dashboard' ? 'class="active"' : '' !!}>
+              <a href="{{ url('/home') }}">
+                  <i class="fa fa-dashboard"></i>
+                  <p>Início</p>
+              </a>
+          </li>
+          <li {!! request()->route()->getName() == 'trends.stars' ? 'class="active"' : '' !!}>
+              <a href="{{ url('/graphics/stars') }}">
+                  <i class="fa fa-star"></i>
+                  <p>Top 10 Stared</p>
+              </a>
+          </li>
+          <li {!! request()->route()->getName() == 'trends.forks' ? 'class="active"' : '' !!}>
+              <a href="{{ url('/graphics/forks') }}">
+                  <i class="fa fa-code-fork"></i>
+                  <p>Top 10 Forked</p>
+              </a>
+          </li>
+      </ul>
     </div>
   </div>
