@@ -1,0 +1,23 @@
+#login{
+  background: url("../img/bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+#main-login{
+  margin-top: 10%;
+}
+#footer-content > .footer {
+    position: fixed;
+    bottom:0px;
+    z-index: 4;
+}
+footer{
+  width: 100%;
+}
+
+.text-login{
+  color: #fff !important ;
+}

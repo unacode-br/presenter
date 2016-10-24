@@ -20,10 +20,8 @@
 </head>
 <body>
 <div class="wrapper">
-	 @unless (request()->is('login'))
-		@include('core::template.snippets.sidebar')
+	@include('core::template.snippets.sidebar')
     <div class="main-panel">
-			@endunless
 			@include('core::template.snippets.navbar')
         <div class="content">
             <div class="container-fluid">
@@ -33,9 +31,7 @@
             </div>
         </div>
 				@include('core::template.snippets.footer')
-				@unless (request()->is('login'))
     </div>
-		@endunless
 </div>
 </body>
 <script src="{{ asset('js/app.js') }}"></script>
