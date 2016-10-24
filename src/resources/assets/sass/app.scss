@@ -1,14 +1,6 @@
-
-// Fonts
-@import url(https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css);
-
-// Variables
-@import "variables";
-
-// Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "animate";
-@import "style";
-@import "bootstrap-social";
-@import "themify-icons";
-@import "default";
+@import "animate.min";
+@import "paper-dashboard";
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css") ;
+@import url("https://fonts.googleapis.com/css?family=Muli:400,300");
+@import "themify-icons"

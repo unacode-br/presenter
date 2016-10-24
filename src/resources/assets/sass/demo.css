@@ -68,7 +68,3 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
-  color: $white-color;
-}

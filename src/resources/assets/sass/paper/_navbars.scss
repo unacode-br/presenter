@@ -54,7 +54,7 @@
 }
 
 .navbar-default {
-    background-color: $color-purple-2;
+    background-color: $bg-nude;
     border-bottom: 1px solid $medium-gray;
 
     .brand{
@@ -164,8 +164,4 @@
     &.navbar-default .navbar-toggle:focus {
         background-color: transparent;
     }
-}
-
-.navbar-default .navbar-brand{
-  color: $white-bg;
 }
