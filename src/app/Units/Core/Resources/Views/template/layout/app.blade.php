@@ -6,6 +6,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Stackhub</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
@@ -15,23 +19,21 @@
     </script>
 </head>
 <body>
-
-<!-- Side -->
 <div class="wrapper">
-    @if (Request::is('login'))
+    @include('core::template.snippets.sidebar')
+    <div class="main-panel" git is>
         @include('core::template.snippets.navbar')
-        @yield('content')
-        @include('core::template.snippets.footer')
-    @else
-        @include('core::template.snippets.sidebar')
-        <div class="main-panel">
-            @include('core::template.snippets.navbar')
-            @yield('content')
-            @include('core::template.snippets.footer')
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    @yield('content')
+                </div>
+            </div>
         </div>
-    @endif
+        @include('core::template.snippets.footer')
+    </div>
 </div>
+</body>
 <script src="{{ asset('js/app.js') }}"></script>
 @yield('scripts')
-</body>
 </html>

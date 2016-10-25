@@ -1,24 +1,23 @@
-@import "style/variables";
-@import "style/mixins";
+#login{
+  background: url("../img/bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
 
-@import "style/typography";
+#main-login{
+  margin-top: 10%;
+}
+#footer-content > .footer {
+    position: fixed;
+    bottom:0px;
+    z-index: 4;
+}
+footer{
+  width: 100%;
+}
 
-// Core CSS
-@import "style/misc";
-@import "style/sidebar-and-main-panel";
-@import "style/buttons";
-@import "style/inputs";
-
-@import "style/alerts";
-@import "style/tables";
-
-@import "style/checkbox-radio";
-@import "style/navbars";
-@import "style/footers";
-
-// Fancy Stuff
-
-@import "style/dropdown";
-@import "style/cards";
-@import "style/chartist";
-@import "style/responsive";
+.text-login{
+  color: #fff !important ;
+}

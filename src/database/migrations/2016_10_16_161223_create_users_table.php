@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Jenssegers\Mongodb\Schema\Blueprint;
 
 class CreateUsersTable extends Migration
 {
@@ -24,7 +25,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        $this->schema->create('users', function ($collection) {
+        if ($this->schema->hasCollection('users')) {
+            return;
+        }
+
+        $this->schema->create('users', function (Blueprint $collection) {
             $collection->increments('id');
             $collection->index('name');
             $collection->index('email');
