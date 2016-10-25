@@ -29,7 +29,7 @@ Sistema Operacional | Linux, Windows, Mac OS
 Tecnologias | Ferramentas
 ----------- | -----------
 Front-End | HTML, SASS, Javascript
-Back-End  | Python
+Back-End  | Python, PHP
 Banco de dados  | MongoDB
 Frameworks  | Laravel, Bootstrap
 IDEs e editores de textos  | PHPStorm, Atom e Sublime
