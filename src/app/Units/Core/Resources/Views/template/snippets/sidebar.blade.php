@@ -3,8 +3,7 @@
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="{{ url('/') }}" class="simple-text">
-                <strong>Stack</strong>
-                <small>hub</small>
+                <strong>Stackhub</strong>
             </a>
         </div>
         <ul class="nav">

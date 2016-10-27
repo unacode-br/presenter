@@ -12,7 +12,10 @@
         }
 
         .simple-text{
-            color: $font-color;
+
+          strong{
+            color: $bg-magenta;
+          }
         }
     }
 
@@ -25,7 +28,7 @@
         .divider{
             background-color: rgba($font-color,.2);
         }
-        
+
     }
 
 }

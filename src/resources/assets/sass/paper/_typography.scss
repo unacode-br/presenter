@@ -80,6 +80,9 @@ blockquote small{
 .glyphicon{
     line-height: 1;
 }
+strong{
+    color: $default-states-color;
+}
 .icon-primary{
     color: $primary-color;
 }

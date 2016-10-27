@@ -77,7 +77,7 @@
             }
 
             &.active > a{
-                color: $color-purple-2;
+                color: $primary-color;
                 opacity: 1;
 
                 &:before{
@@ -142,11 +142,11 @@
     &[data-background-color="black"]{
         @include sidebar-background-color($black-background-color, $white-color);
     }
-    &[data-active-color="purple"]{
-        @include sidebar-background-color($color-purple-1, $white-color);
+    &[data-background-color="magenta"]{
+        @include sidebar-background-color($bg-magenta, $white-color);
     }
-    &[data-active-color="gray"]{
-        @include sidebar-background-color($gray, $white-color);
+    &[data-background-color="cinza"]{
+        @include sidebar-background-color($bg-cinza, $white-color);
     }
     &[data-active-color="primary"]{
         @include sidebar-active-color($primary-color);
@@ -163,10 +163,6 @@
     &[data-active-color="danger"]{
         @include sidebar-active-color($danger-color);
     }
-    &[data-active-color="purple"]{
-        @include sidebar-active-color($color-purple-2);
-    }
-
 
 }
 

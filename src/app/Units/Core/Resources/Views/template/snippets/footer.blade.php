@@ -1,7 +1,11 @@
 <footer class="footer">
     <div class="container-fluid">
+        @if (request()->is('login'))
+        <div class="copyright text-center {!! request()->route()->getName() == 'login' ? 'text-login' : '' !!}">
+        @else
         <div class="copyright pull-right">
-            &copy; {{ date('Y') }}, Feito com <i class="fa fa-heart heart"></i> by Unacode
+        @endif
+          &copy; {{ date('Y') }}, made with <i class="fa fa-heart heart"></i> by Unacode
         </div>
     </div>
 </footer>
