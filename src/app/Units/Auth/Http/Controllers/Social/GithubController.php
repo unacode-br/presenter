@@ -4,5 +4,8 @@ namespace App\Units\Auth\Http\Controllers\Social;
 
 class GithubController extends SocialController
 {
-    protected $provider = 'github';
+    public function __construct()
+    {
+        $this->provider = 'github';
+    }
 }

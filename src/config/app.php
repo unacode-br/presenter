@@ -184,6 +184,8 @@ return [
          * Domains
          */
         App\Domains\Users\Providers\DomainServiceProvider::class,
+        App\Domains\Users\Providers\EventServiceProvider::class,
+
 
         /**
          * Units

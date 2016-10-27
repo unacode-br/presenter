@@ -1,28 +1,24 @@
-@import "paper/variables";
-@import "paper/mixins";
+@import "style/variables";
+@import "style/mixins";
 
-@import "paper/typography";
+@import "style/typography";
 
 // Core CSS
-@import "paper/misc";
-@import "paper/sidebar-and-main-panel";
-@import "paper/buttons";
-@import "paper/inputs";
+@import "style/misc";
+@import "style/sidebar-and-main-panel";
+@import "style/buttons";
+@import "style/inputs";
 
-@import "paper/alerts";
-@import "paper/tables";
+@import "style/alerts";
+@import "style/tables";
 
-@import "paper/checkbox-radio";
-@import "paper/navbars";
-@import "paper/footers";
+@import "style/checkbox-radio";
+@import "style/navbars";
+@import "style/footers";
 
 // Fancy Stuff
 
-@import "paper/dropdown";
-@import "paper/cards";
-@import "paper/chartist";
-@import "paper/responsive";
-
-
-
-
+@import "style/dropdown";
+@import "style/cards";
+@import "style/chartist";
+@import "style/responsive";

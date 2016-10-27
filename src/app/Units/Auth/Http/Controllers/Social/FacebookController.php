@@ -4,5 +4,8 @@ namespace App\Units\Auth\Http\Controllers\Social;
 
 class FacebookController extends SocialController
 {
-    protected $provider = 'facebook';
+    public function __construct()
+    {
+        $this->provider = 'facebook';
+    }
 }

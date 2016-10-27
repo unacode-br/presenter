@@ -3,17 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Login Stackhub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body id="login">
 <div class="container" id="main-login">
     <div class="row">
         <div class="col-sm-8 text-center">
-            <div class="col-sm-12 card">
+          <h2 class="hidden-md hidden-lg logo-mobile"><strong>Stack</strong><small>Hub</small></h2>
+            <div class="hidden-xs col-sm-12 card">
                 <h2><strong>Stack</strong>
                     <small>Hub</small>
                 </h2>
-                <p class="hidden-xs">
+                <p >
                     StackHub é uma ferramenta de data mining que mostrará ao usuário informações acerca das tecnologias
                     mais utilizadas no Github e StackOverflow. Ela mostrará o uso e o aprendizado dessas tecnologias,
                     para que os usuários possam através dessas informações, escolherem qual será a próxima tecnologia

@@ -1,6 +1,6 @@
 # Stackhub - Presenter
 
-**Stackhub** é uma ferramenta de data mining criada para trazer ao usuário informações acerca das tecnologias mais utilizadas no Github e Stackoverflow.
+**Stackhub** é uma ferramenta de data science criada para trazer ao usuário informações acerca das tecnologias mais utilizadas no Github e Stackoverflow.
 
 Ela mostrará ao usuário o uso e a curva de aprendizado dessas tecnologias, para que os usuários possam através dessas informações escolherem qual será a próxima tecnologia que vale a pena investir!
 
@@ -29,7 +29,7 @@ Sistema Operacional | Linux, Windows, Mac OS
 Tecnologias | Ferramentas
 ----------- | -----------
 Front-End | HTML, SASS, Javascript
-Back-End  | Python
+Back-End  | Python, PHP
 Banco de dados  | MongoDB
 Frameworks  | Laravel, Bootstrap
 IDEs e editores de textos  | PHPStorm, Atom e Sublime

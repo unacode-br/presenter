@@ -4,5 +4,8 @@ namespace App\Units\Auth\Http\Controllers\Social;
 
 class GoogleController extends SocialController
 {
-    protected $provider = 'google';
+    public function __construct()
+    {
+        $this->provider = 'google';
+    }
 }
