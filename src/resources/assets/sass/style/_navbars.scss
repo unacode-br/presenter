@@ -62,7 +62,7 @@
     }
     .navbar-nav{
         > li > a:not(.btn){
-            color: $dark-gray;
+            color: $color-purple-2;
         }
 
         > .active > a,
@@ -72,7 +72,7 @@
         > li > a:not(.btn):focus {
             background-color: transparent;
             border-radius: 3px;
-            color: $info-color;
+            color: $color-purple-2;
             @include opacity(1);
         }
 

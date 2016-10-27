@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="sidebar" data-active-color="gray" data-active-color="purple">
+<div class="sidebar" data-active-color="white" data-active-color="purple">
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="{{ url('/') }}" class="simple-text">
