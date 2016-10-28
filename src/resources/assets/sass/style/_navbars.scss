@@ -54,7 +54,7 @@
 }
 
 .navbar-default {
-    background-color: $color-purple-2;
+    background-color: $navbar-color;
     border-bottom: 1px solid $medium-gray;
 
     .brand{
@@ -62,7 +62,7 @@
     }
     .navbar-nav{
         > li > a:not(.btn){
-            color: $color-purple-2;
+            color: $white-color;
         }
 
         > .active > a,
@@ -72,7 +72,7 @@
         > li > a:not(.btn):focus {
             background-color: transparent;
             border-radius: 3px;
-            color: $color-purple-2;
+            color: $white-color;
             @include opacity(1);
         }
 
