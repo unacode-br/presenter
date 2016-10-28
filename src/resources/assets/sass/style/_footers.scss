@@ -1,7 +1,9 @@
 .footer{
     background-attachment: fixed;
-    position: relative;
     line-height: 20px;
+    position:absolute;
+    bottom:0;
+    width:100%;
     nav {
         ul {
           list-style: none;
