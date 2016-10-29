@@ -1,3 +1,39 @@
+.card-graphic{
+    border-radius: $border-radius-extreme;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    background-color: #FFFFFF;
+    color: $card-black-color;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    min-height: 130px;
+
+    .content{
+        padding: 15px 15px 10px 15px;
+    }
+    .header{
+        padding: 10px 10px 0;
+    }
+    .description{
+        font-size: $font-paragraph;
+        color: $font-color;
+    }
+
+    .footer{
+        padding: 0;
+        line-height: 30px;
+
+        .legend{
+            padding: 5px 0;
+        }
+
+        hr{
+            margin-top: 50px;
+            margin-bottom: 5px;
+            margin-right: 29px;
+        }
+    }
+}
 .card{
     border-radius: $border-radius-extreme;
     box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
