@@ -21,7 +21,7 @@
     </tr>
     <tr>
         <td style="padding: 20px 0 30px 0;">
-            Caso não seja você que tenha efetuado o cadastro, por favor clique <a href="#" style="color:#660F57"><b>aqui</b></a>
+            Esperamos poder ajuda-lo(a) na busca de novos conhecimentos.
     </tr>
     <tr  style="padding: 20px 0 30px 0;">
         <td style="color: gray; font-size: 12px; text-align: center;">
