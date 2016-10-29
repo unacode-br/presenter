@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Jenssegers\Mongodb\Schema\Blueprint;
 
 class RemoveEmailUniqueIndex extends Migration
 {
@@ -24,7 +25,7 @@ class RemoveEmailUniqueIndex extends Migration
      */
     public function up()
     {
-        $this->schema->table('users', function ($collection) {
+        $this->schema->table('users', function (Blueprint $collection) {
             $collection->dropIndex('email');
             $collection->index('email');
         });
