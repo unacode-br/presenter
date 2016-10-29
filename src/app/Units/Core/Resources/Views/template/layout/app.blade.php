@@ -25,9 +25,7 @@
         @include('core::template.snippets.navbar')
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
                     @yield('content')
-                </div>
             </div>
         </div>
         @include('core::template.snippets.footer')

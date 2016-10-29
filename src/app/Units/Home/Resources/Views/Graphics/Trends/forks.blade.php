@@ -1,20 +1,21 @@
 @extends('core::template.layout.app')
 
 @section('content')
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Github Trends by Forks</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="forks"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-graphic">
+            <div class="content">
+                <div id="forks" class="ct-chart"></div>
+                <div class="footer">
+                    <hr>
+                    <div class="stats">
+                        <i class="ti-star"></i>for Github
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('scripts')
@@ -51,7 +52,7 @@
                         fontWeight: 'bold',
                         fontSize: '13px'
                     },
-                    enabled: true
+                    enabled: false
                 },
                 xAxis: {
                     gridLineWidth: 1,

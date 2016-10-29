@@ -9527,7 +9527,7 @@ textarea.form-control {
 .footer {
   background-attachment: fixed;
   line-height: 20px;
-  position: absolute;
+  position: static;
   bottom: 0;
   width: 100%; }
   .footer nav ul {
@@ -9643,6 +9643,32 @@ textarea.form-control {
 .btn-group.select.open {
   overflow: visible; }
 
+.card-graphic {
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  min-height: 130px; }
+  .card-graphic .content {
+    padding: 15px 15px 10px 15px; }
+  .card-graphic .header {
+    padding: 10px 10px 0; }
+  .card-graphic .description {
+    font-size: 16px;
+    color: #66615b; }
+  .card-graphic .footer {
+    padding: 0;
+    line-height: 30px; }
+    .card-graphic .footer .legend {
+      padding: 5px 0; }
+    .card-graphic .footer hr {
+      margin-top: 50px;
+      margin-bottom: 5px;
+      margin-right: 29px; }
+
 .card {
   border-radius: 6px;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
@@ -9651,7 +9677,7 @@ textarea.form-control {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  min-height: 260px; }
+  min-height: 130px; }
   .card .image {
     width: 100%;
     overflow: hidden;
@@ -9701,7 +9727,8 @@ textarea.form-control {
       padding: 5px 0; }
     .card .footer hr {
       margin-top: 5px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      margin-right: 29px; }
   .card .stats {
     color: #a9a9a9;
     font-weight: 300; }
@@ -12762,6 +12789,9 @@ textarea.form-control {
   background-position: center;
   background-size: cover;
   height: 100%; }
+
+.login {
+  min-height: 260px; }
 
 @media (max-width: 991px) {
   #login {

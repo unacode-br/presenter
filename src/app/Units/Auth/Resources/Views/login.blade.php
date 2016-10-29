@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-sm-8 text-center">
           <h2 class="hidden-md hidden-lg logo-mobile"><strong>Stack</strong><small>Hub</small></h2>
-            <div class="hidden-xs col-sm-12 card">
+            <div class="hidden-xs col-sm-12 login card">
                 <h2><strong>Stack</strong>
                     <small>Hub</small>
                 </h2>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="col-sm-4 text-center ">
-            <div class="col-sm-10 col-sm-offset-2 card">
+            <div class="col-sm-10 col-sm-offset-2 login card">
                 <h2 class="hidden-xs"><strong>Login</strong></h2>
                 <h3 class="hidden-md hidden-lg">Login</h3>
                 </br>
