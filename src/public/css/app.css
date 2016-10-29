@@ -9651,7 +9651,7 @@ textarea.form-control {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  min-height: 260px; }
+  min-height: 130px; }
   .card .image {
     width: 100%;
     overflow: hidden;
@@ -9701,7 +9701,8 @@ textarea.form-control {
       padding: 5px 0; }
     .card .footer hr {
       margin-top: 5px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      margin-right: 29px; }
   .card .stats {
     color: #a9a9a9;
     font-weight: 300; }
@@ -12762,6 +12763,9 @@ textarea.form-control {
   background-position: center;
   background-size: cover;
   height: 100%; }
+
+.login {
+  min-height: 260px; }
 
 @media (max-width: 991px) {
   #login {
