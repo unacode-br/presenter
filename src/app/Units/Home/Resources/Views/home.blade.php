@@ -65,14 +65,15 @@
                             </div>
                             <div class="col-xs-7">
                                 <div class="numbers">
-                                    Top Stared
+                                    <p>Most</p>
+                                    Stared
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
                             <hr />
                             <div class="stats">
-                                <i class="ti-stats-up"></i> <a href="{{ url('/graphics/stars') }}">Top Stared for github</a>
+                                <i class="ti-stats-up"></i> <a href="{{ url('/graphics/stars') }}">Top Stared on GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -89,14 +90,15 @@
                             </div>
                             <div class="col-xs-7">
                                 <div class="numbers">
-                                    Top Forked
+                                    <p>Most</p>
+                                    Forked
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
                             <hr />
                             <div class="stats">
-                              <i class="ti-stats-up"></i> <a href="{{ url('/graphics/forks') }}">Top Forked for github</a>
+                              <i class="ti-stats-up"></i> <a href="{{ url('/graphics/forks') }}">Top Forked on GitHub</a>
                             </div>
                         </div>
                     </div>
