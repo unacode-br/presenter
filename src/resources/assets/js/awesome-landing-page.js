@@ -13,7 +13,7 @@
         });
 
         $(window).on('scroll', function() {
-            responsive = $(window).width();
+            var responsive = $(window).width();
             if (responsive >= 768) {
                 parallax();
             }
@@ -53,7 +53,7 @@
         });
 
         var parallax = debounce(function() {
-            no_of_elements = 0;
+            var no_of_elements = 0;
             $('.parallax').each(function() {
                 var $elem = $(this);
 

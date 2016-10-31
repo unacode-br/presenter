@@ -19,16 +19,6 @@
                 <span class="icon-bar bar2"></span>
                 <span class="icon-bar bar3"></span>
             </button>
-            <a href="http://www.creative-tim.com">
-                <div class="logo-container">
-                    <div class="logo">
-                        <img src="img/new_logo.png" alt="Creative Tim Logo">
-                    </div>
-                    <div class="brand">
-                        Creative Tim
-                    </div>
-                </div>
-            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="example" >
@@ -45,45 +35,24 @@
                         Tweet
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-pinterest"></i>
-                        Pin
-                    </a>
-                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </nav>
 <div class="wrapper">
-    <div class="parallax filter-gradient orange" data-color="orange">
+    <div class="parallax filter-gradient purple" data-color="purple">
         <div class="parallax-background">
-            <img class="parallax-background-image" src="img/showcases/showcase-1/bg.jpg">
+            <img class="parallax-background-image" src="img/bg.jpeg">
         </div>
         <div class= "container">
             <div class="row">
-                <div class="col-md-7">
-                    <div class="description">
-                        <h2>Showcase 1 - Be serious about your music.</h2>
+                <div class="col-md-12">
+                    <div class="description text-center">
+                        <h2>StackHub</small></h2>
                         <br>
                         <h5>PlayIT! will become your favorite. It offers a list of features long enough that we could sit here talking about it all day. But, if you're serious about your music, you should definitely take a look. Find us one every market!</h5>
-                    </div>
-                    <div class="buttons">
-                        <button class="btn btn-fill btn-neutral">
-                            <i class="fa fa-apple"></i> Appstore
-                        </button>
-                        <button class="btn btn-simple btn-neutral">
-                            <i class="fa fa-android"></i>
-                        </button>
-                        <button class="btn btn-simple btn-neutral">
-                            <i class="fa fa-windows"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-md-5  hidden-xs">
-                    <div class="parallax-image">
-                        <img class="phone" src="img/showcases/showcase-1/iphone.png"/>
+                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Sign in</a>
                     </div>
                 </div>
             </div>
@@ -195,7 +164,7 @@
     </div>
     <div class="section section-testimonial">
         <div class="container">
-            <h4 class="header-text text-center">What people think</h4>
+            <h4 class="header-text text-center">Team</h4>
             <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
@@ -236,14 +205,13 @@
         </div>
     </div>
     <div class="section section-no-padding">
-        <div class="parallax filter-gradient orange" data-color="orange">
+        <div class="parallax filter-gradient purple" data-color="purple">
             <div class="parallax-background">
-                <img class ="parallax-background-image flipped" src="img/showcases/showcase-1/bg2.jpg">
+                <img class ="parallax-background-image flipped" src="img/bg.jpeg">
             </div>
             <div class="info">
                 <h1>Download this landing page for free!</h1>
                 <p>Beautiful multipurpose bootstrap landing page.</p>
-                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg btn-fill">DOWNLOAD</a>
             </div>
         </div>
     </div>
