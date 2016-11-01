@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\Trends;
+namespace App\Domains\Graphics;
 
-use App\Domains\Trends\Presenters\TrendPresenter;
+use App\Domains\Graphics\Presenters\TrendPresenter;
 use Jenssegers\Mongodb\Eloquent\Model;
 use Codecasts\Presenter\Presentable;
 

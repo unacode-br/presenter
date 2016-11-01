@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\Trends\Transformers;
+namespace App\Domains\Graphics\Transformers;
 
-use App\Domains\Trends\Trend;
+use App\Domains\Graphics\Trend;
 use League\Fractal\TransformerAbstract as Transformer;
 
 class TrendTransformer extends Transformer

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Trends\Contracts;
+namespace App\Domains\Graphics\Contracts;
 
 use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
 

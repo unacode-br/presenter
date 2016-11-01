@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domains\Trends\Repositories;
+namespace App\Domains\Graphics\Repositories;
 
-use App\Domains\Trends\Transformers\TrendTransformer;
-use App\Domains\Trends\Trend;
+use App\Domains\Graphics\Transformers\TrendTransformer;
+use App\Domains\Graphics\Trend;
 use Artesaos\Warehouse\AbstractCrudRepository;
-use App\Domains\Trends\Contracts\TrendRepository as TrendRepositoryContract;
+use App\Domains\Graphics\Contracts\TrendRepository as TrendRepositoryContract;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
 
 class TrendRepository extends AbstractCrudRepository implements TrendRepositoryContract
