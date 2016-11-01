@@ -43,3 +43,14 @@ footer{
 .logo-mobile{
   color: #fff;
 }
+
+@media (max-width: 1300px){
+  .stats{  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 19px;      /* fallback */
+    -webkit-box-orient: vertical;
+  }
+}
