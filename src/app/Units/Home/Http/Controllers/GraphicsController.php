@@ -2,7 +2,8 @@
 
 namespace App\Units\Home\Http\Controllers;
 
-use App\Domains\Trends\Trend;
+use App\Domains\Graphics\LearningCurveAll;
+use App\Domains\Graphics\Trend;
 use Codecasts\Support\Http\Controller;
 
 /**
@@ -10,6 +11,12 @@ use Codecasts\Support\Http\Controller;
  */
 class GraphicsController extends Controller
 {
+    public function showGraphicsLcLang()
+    {
+        $languages = LearningCurveAll::getTopLanguages();
+
+        return view('home::Graphics.learning_curve.languages', compact(['languages']));
+    }
 
     public function showGraphicsStars()
     {
