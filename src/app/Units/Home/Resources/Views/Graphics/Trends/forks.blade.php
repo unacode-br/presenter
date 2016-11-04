@@ -9,7 +9,7 @@
                 <div class="footer">
                     <hr>
                     <div class="stats">
-                        <i class="ti-star"></i>for Github
+                        <i class="ti-star"></i>source: GitHub
                     </div>
                 </div>
             </div>
