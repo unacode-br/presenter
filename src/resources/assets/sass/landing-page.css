@@ -1704,5 +1704,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 }
 
 .carousel-inner{
-  margin-top: 100px; 
+  margin-top: 100px;
+}
+
+#varpa{
+  background-image: url('../img/varpa.jpg');
+  background-size: 100px 100px;
+}
+
+#Taynara{
+  background-image: url('../img/taynara.jpg');
+  background-size: 100px 100px;
+}
+
+#Jordana{
+  background-image: url('../img/jordana.jpg');
+  background-size: 100px 100px;
+}
+#Gustavo{
+  background-image: url('../img/gustavo.jpg');
+  background-size: 100px 100px;
+}
+
+#Leandro{
+  background-image: url('../img/leandro.jpg');
+  background-size: 100px 100px;
 }

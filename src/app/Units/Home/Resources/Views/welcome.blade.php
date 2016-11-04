@@ -99,30 +99,37 @@
             <h4 class="header-text text-center">Team</h4>
             <div class="carousel-inner">
               <div class="">
-                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="mask" id="varpa"></div>
                 <div class="desription text-center">
                     <h5>Cinthia Silman</h5>
                     <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
                 </div>
               </div>
               <div class="">
-                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="mask" id="Leandro"></div>
                 <div class="desription text-center">
-                    <h5>Cinthia Silman</h5>
+                    <h5>Leandro Cazarini </h5>
                     <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
                 </div>
               </div>
               <div class="">
-                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="mask" id="Jordana"></div>
                 <div class="desription text-center">
-                    <h5>Cinthia Silman</h5>
+                    <h5>Jordana Nogueira</h5>
                     <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
                 </div>
               </div>
               <div class="">
-                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="mask" id="Gustavo"></div>
                 <div class="desription text-center">
-                    <h5>Cinthia Silman</h5>
+                    <h5>Gustavo Marttos</h5>
+                    <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                </div>
+              </div>
+              <div class="">
+                <div class="mask" id="Taynara"></div>
+                <div class="desription text-center">
+                    <h5>Taynara Sene</h5>
                     <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
                 </div>
               </div>
