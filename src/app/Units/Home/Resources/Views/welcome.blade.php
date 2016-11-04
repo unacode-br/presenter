@@ -97,42 +97,35 @@
     <div class="section section-testimonial">
         <div class="container">
             <h4 class="header-text text-center">Team</h4>
-            <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item">
-                        <div class="mask">
-                            <img src="img/faces/face-4.jpg">
-                        </div>
-                        <div class="carousel-testimonial-caption">
-                            <p>Jay Z, Producer</p>
-                            <h3>"I absolutely love your app! It's truly amazing and looks awesome!"</h3>
-                        </div>
-                    </div>
-                    <div class="item active">
-                        <div class="mask">
-                            <img src="img/faces/face-3.jpg">
-                        </div>
-                        <div class="carousel-testimonial-caption">
-                            <p>Drake, Artist</p>
-                            <h3>"This is one of the most awesome apps I've ever seen! Wish you luck Creative Tim!"</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="mask">
-                            <img src="img/faces/face-2.jpg">
-                        </div>
-                        <div class="carousel-testimonial-caption">
-                            <p>Rick Ross, Musician</p>
-                            <h3>"Loving this! Just picked it up the other day. Thank you for the work you put into this."</h3>
-                        </div>
-                    </div>
+            <div class="carousel-inner">
+              <div class="">
+                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="desription text-center">
+                    <h5>Cinthia Silman</h5>
+                    <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
                 </div>
-                <ol class="carousel-indicators carousel-indicators-orange">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
+              </div>
+              <div class="">
+                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="desription text-center">
+                    <h5>Cinthia Silman</h5>
+                    <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                </div>
+              </div>
+              <div class="">
+                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="desription text-center">
+                    <h5>Cinthia Silman</h5>
+                    <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                </div>
+              </div>
+              <div class="">
+                <div class="mask" ><img src="img/faces/face-4.jpg"></div>
+                <div class="desription text-center">
+                    <h5>Cinthia Silman</h5>
+                    <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                </div>
+              </div>
             </div>
         </div>
     </div>
