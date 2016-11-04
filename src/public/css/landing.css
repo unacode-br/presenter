@@ -6904,6 +6904,12 @@ a:focus, a:active {
 .landing-page .section-features .card.card-red .icon i {
   color: #E01724; }
 
+.landing-page .section-features .card.card-purple {
+  border-color: #660f57; }
+
+.landing-page .section-features .card.card-purple .icon i {
+  color: #660f57; }
+
 .landing-page .section-features .card h4 {
   font-weight: 300;
   font-size: 18px;

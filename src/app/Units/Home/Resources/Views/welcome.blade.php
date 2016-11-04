@@ -63,31 +63,31 @@
             <h4 class="header-text text-center">Features</h4>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card card-orange">
+                    <div class="card card-purple">
                         <div class="icon">
-                            <i class="pe-7s-musiclist"></i>
+                            <i class="pe-7s-star"></i>
                         </div>
                         <div class="text">
-                            <h4>Be serious about your music</h4>
+                            <h4>Top Stars</h4>
                             <p>All appointments sync with your Google calendar so your availability is always up to date. See your schedule at a glance from any device.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card-orange">
+                    <div class="card card-purple">
                         <div class="icon">
-                            <i class="pe-7s-bell"></i>
+                            <i class="pe-7s-usb"></i>
                         </div>
-                        <h4>Smart Notifications on hands</h4>
+                        <h4>Top Forks</h4>
                         <p>Automatic text and email reminders make sure customers always remember their upcoming appointments.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card-orange">
+                    <div class="card card-purple">
                         <div class="icon">
-                            <i class="pe-7s-play"></i>
+                            <i class="pe-7s-graph3"></i>
                         </div>
-                        <h4>PlaIT on any devices</h4>
+                        <h4>Learning Curve</h4>
                         <p>Take payments and run your business on the go, in your store and then see how it all adds up with analytics.</p>
                     </div>
                 </div>
