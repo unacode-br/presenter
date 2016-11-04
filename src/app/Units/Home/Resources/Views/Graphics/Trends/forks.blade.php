@@ -1,21 +1,21 @@
 @extends('core::template.layout.app')
 
 @section('content')
-<div class="row">
-    <div class="col-md-12">
-        <div class="card-graphic">
-            <div class="content">
-                <div id="forks" class="ct-chart"></div>
-                <div class="footer">
-                    <hr>
-                    <div class="stats">
-                        <i class="ti-star"></i>source: GitHub
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-graphic">
+                <div class="content">
+                    <div id="forks" class="ct-chart"></div>
+                    <div class="footer">
+                        <hr>
+                        <div class="stats">
+                            <i class="ti-star"></i>source: GitHub
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('scripts')

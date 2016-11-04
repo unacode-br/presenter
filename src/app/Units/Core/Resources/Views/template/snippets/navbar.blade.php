@@ -9,12 +9,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        @if (Request::is('login'))
+    @if (Request::is('login'))
         <!-- Branding Image -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <strong>Stack</strong>
-            <small>Hub</small>
-        </a>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <strong>Stack</strong>
+                <small>Hub</small>
+            </a>
         @endif
     </div>
 
