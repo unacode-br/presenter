@@ -7325,6 +7325,22 @@ a:focus, a:active {
   background-image: url("../img/leandro.jpg");
   background-size: 100px 100px; }
 
+a[href="#top"] {
+  padding: 10px;
+  position: fixed;
+  top: 90%;
+  right: 40px;
+  display: none;
+  font-size: 30px; }
+
+a[href="#top"]:hover {
+  text-decoration: none; }
+
+.top:hover, .top {
+  z-index: 9999px;
+  color: #660f57;
+  font-size: 50px; }
+
 /* Slider */
 .slick-slider {
   position: relative;

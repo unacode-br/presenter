@@ -24,13 +24,13 @@
         <div class="collapse navbar-collapse" id="example" >
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">
+                    <a  href="https://www.facebook.com/stackhub">
                         <i class="fa fa-facebook-square"></i>
                         Like
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://twitter.com/StackHub_">
                         <i class="fa fa-twitter"></i>
                         Tweet
                     </a>
@@ -149,49 +149,23 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+
             <div class="social-area pull-right">
-                <a class="btn btn-social btn-facebook btn-simple">
+                <a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/stackhub">
                     <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="btn btn-social btn-twitter btn-simple">
+                <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/StackHub_">
                     <i class="fa fa-twitter"></i>
-                </a>
-                <a class="btn btn-social btn-pinterest btn-simple">
-                    <i class="fa fa-pinterest"></i>
                 </a>
             </div>
             <div class="copyright">
-                &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love
+                &copy; 2016 Unacode-br, made with love
             </div>
         </div>
     </footer>
 </div>
-
 </div>
 </body>
+<a href="#top" class="top hidden-xs"><i class="pe-7s-magnet"></i></a>
 <script src="{{ asset('js/landing.js') }}"></script>
 </html>
