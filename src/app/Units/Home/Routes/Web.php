@@ -26,6 +26,7 @@ class Web extends RouteFile
         $this->router->get('/graphics/stars', 'GraphicsController@showGraphicsStars')->name('trends.stars');
         $this->router->get('/graphics/forks', 'GraphicsController@showGraphicsForks')->name('trends.forks');
         $this->router->get('/graphics/lc-lang', 'GraphicsController@showGraphicsLcLang')->name('lc.lang');
+        $this->router->get('/graphics/learning/{language}', 'GraphicsController@showGraphicsLearningCurve')->name('learning');
     }
 
 }

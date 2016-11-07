@@ -27,7 +27,6 @@ class LearningCurveAll extends Model
      *
      * @var array
      */
-
     protected $fillable = ['language', 'tag', 'point'];
 
     /**

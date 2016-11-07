@@ -5,11 +5,11 @@
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
-                    <div id="lc-lang" class="ct-chart"></div>
+                    <div id="lc-language" class="ct-chart"></div>
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i>source: GitHub and Stackoverflow
+                            <i class="ti-star"></i> Source: GitHub and Stackoverflow
                         </div>
                     </div>
                 </div>
@@ -21,14 +21,14 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            Highcharts.chart('lc-lang', {
+            Highcharts.chart('lc-language', {
                 colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
                 chart: {
                     backgroundColor: null,
-                    type: 'bar'
+                    type: 'column'
                 },
                 title: {
-                    text: 'Trend Curve by Language - Top 15',
+                    text: 'Learning Curve - {{ $language->language['name'] }}',
                     style: {
                         fontSize: '16px',
                         fontWeight: 'bold',
@@ -53,18 +53,13 @@
                 },
                 xAxis: {
                     gridLineWidth: 1,
-                    title: {
-                        style: {
-                            textTransform: 'uppercase'
-                        },
-                        text: 'Languages'
-                    },
                     labels: {
+                        rotation: -45,
                         style: {
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $languages->map(function($lang) { return $lang->language['name']; }) !!}
+                    categories: []
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -72,7 +67,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Points per language<br><small style="text-transform: lowercase">(More points is better)</small>'
+                        text: 'Total of stars'
                     },
                     labels: {
                         style: {
@@ -99,9 +94,9 @@
                 },
 
                 series: [{
-                    name: 'Forks',
+                    name: 'Stars',
                     colorByPoint: true,
-                    data: {!! $languages->map(function($lang) { return $lang->point; }) !!}
+                    data: []
                 }]
             });
         });
