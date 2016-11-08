@@ -22,10 +22,10 @@
     <script type="text/javascript">
         $(function () {
             Highcharts.chart('lc-language', {
-                colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
+                colors: ["#df5353"],
                 chart: {
                     backgroundColor: null,
-                    type: 'column'
+                    type: 'spline'
                 },
                 title: {
                     text: 'Learning Curve - {{ $language->language['name'] }}',
@@ -36,13 +36,7 @@
                     }
                 },
                 tooltip: {
-                    headerFormat: '<span style="font-size:11px; color: {point.color}">{point.key}</span><br>',
-                    pointFormatter: function () {
-                        return Highcharts.numberFormat(this.y, 0, '', '.');
-                    },
-                    borderWidth: 0,
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    shadow: false
+                    enabled: false
                 },
                 legend: {
                     itemStyle: {
@@ -53,13 +47,18 @@
                 },
                 xAxis: {
                     gridLineWidth: 1,
+                    title: {
+                        style: {
+                            textTransform: 'uppercase'
+                        },
+                        text: 'Base Acumulada'
+                    },
                     labels: {
-                        rotation: -45,
                         style: {
                             fontSize: '12px'
                         }
                     },
-                    categories: []
+                    categories: {!! json_encode(array_map(function($lang) { return $lang['x']; }, $language->points)) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -67,7 +66,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Total of stars'
+                        text: '% de Aprendizado'
                     },
                     labels: {
                         style: {
@@ -84,7 +83,7 @@
                         dataLabels: {
                             enabled: true,
                             formatter: function () {
-                                return Highcharts.numberFormat(this.y, 0, '', '.');
+                                return Highcharts.numberFormat(this.point.value, 2, ',', '.');
                             }
                         }
                     }
@@ -94,9 +93,8 @@
                 },
 
                 series: [{
-                    name: 'Stars',
-                    colorByPoint: true,
-                    data: []
+                    name: 'Base Acumulada',
+                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'], 'value' => $lang['value']]; }, $language->points)) !!}
                 }]
             });
         });
