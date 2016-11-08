@@ -1,5 +1,7 @@
 @extends('core::template.layout.app')
 
+@section('title', 'Learning Curve (' . $language->language['name'] . ')')
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -94,7 +96,7 @@
 
                 series: [{
                     name: 'Base Acumulada',
-                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'], 'value' => $lang['value']]; }, $language->points)) !!}
+                    data: {!! json_encode(array_reverse(array_map(function($lang) { return ['y' => $lang['y'], 'value' => $lang['value']]; }, $language->points))) !!}
                 }]
             });
         });

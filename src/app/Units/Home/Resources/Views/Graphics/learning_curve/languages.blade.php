@@ -1,5 +1,7 @@
 @extends('core::template.layout.app')
 
+@section('title', 'Trending Languages')
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
