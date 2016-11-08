@@ -10,20 +10,21 @@
                             <div class="row">
                                 <div class="col-xs-5">
                                     <div class="icon-big icon-primary text-center">
-                                        <i class="ti-github"></i>
+                                        <i class="ti-stats-down"></i>
                                     </div>
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="numbers">
-                                        GitHub
+                                        <p>learning</p>
+                                        curve
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-announcement"></i> <a href="https://github.com/explore">View
-                                        Showcases</a>
+                                    <i class="ti-bar-chart-alt"></i>
+                                    <a href="{{ url('/graphics/learning') }}">View graphic</a>
                                 </div>
                             </div>
                         </div>
@@ -40,16 +41,16 @@
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="numbers">
-                                        <p>learning</p>
-                                        Curve
+                                        <p>trending</p>
+                                        techs
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-bar-chart-alt"></i><a href="{{ url('/graphics/trends-lang') }}">View
-                                        graphic </a>
+                                    <i class="ti-bar-chart-alt"></i>
+                                    <a href="{{ url('/graphics/trends-lang') }}">View graphic</a>
                                 </div>
                             </div>
                         </div>
@@ -66,15 +67,16 @@
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="numbers">
-                                        <p>Most</p>
-                                        Stared
+                                        <p>most</p>
+                                        stared
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/stars') }}">Top Stared</a>
+                                    <i class="ti-stats-up"></i>
+                                    <a href="{{ url('/graphics/stars') }}">Top stared</a>
                                 </div>
                             </div>
                         </div>
@@ -91,15 +93,16 @@
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="numbers">
-                                        <p>Most</p>
-                                        Forked
+                                        <p>most</p>
+                                        forked
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/forks') }}">Top Forked</a>
+                                    <i class="ti-stats-up"></i>
+                                    <a href="{{ url('/graphics/forks') }}">Top forked</a>
                                 </div>
                             </div>
                         </div>
