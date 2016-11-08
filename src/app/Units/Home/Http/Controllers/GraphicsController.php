@@ -22,8 +22,10 @@ class GraphicsController extends Controller
     public function showGraphicsLearningCurve($language)
     {
         $language = LearningCurve::where('language.slug', strtolower($language))->first();
-
-        return view('home::Graphics.learning_curve.language', compact(['language']));
+        if ($language) {
+          return view('home::Graphics.learning_curve.language', compact(['language']));
+        }
+        abort(404);
     }
 
     public function showGraphicsStars()
