@@ -48,7 +48,8 @@
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-bar-chart-alt"></i><a href="{{ url('/graphics/trends-lang') }}">View graphic </a>
+                                    <i class="ti-bar-chart-alt"></i><a href="{{ url('/graphics/trends-lang') }}">View
+                                        graphic </a>
                                 </div>
                             </div>
                         </div>
