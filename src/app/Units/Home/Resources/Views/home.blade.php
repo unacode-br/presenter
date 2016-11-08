@@ -35,22 +35,20 @@
                             <div class="row">
                                 <div class="col-xs-5">
                                     <div class="icon-big icon-danger text-center">
-                                        <i class="ti-stack-overflow"></i>
+                                        <i class="ti-stats-up"></i>
                                     </div>
                                 </div>
                                 <div class="col-xs-7">
                                     <div class="numbers">
-                                        <p>
-                                            Stackoverflow
-                                        </p>
+                                        <p>learning</p>
+                                        Curve
                                     </div>
                                 </div>
                             </div>
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-bar-chart-alt"></i><a href="http://stackoverflow.com/documentation">View
-                                        Popular Languages </a>
+                                    <i class="ti-bar-chart-alt"></i><a href="{{ url('/graphics/trends-lang') }}">View graphic </a>
                                 </div>
                             </div>
                         </div>
@@ -75,8 +73,7 @@
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/stars') }}">Top Stared on
-                                        GitHub</a>
+                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/stars') }}">Top Stared</a>
                                 </div>
                             </div>
                         </div>
@@ -101,8 +98,7 @@
                             <div class="footer">
                                 <hr/>
                                 <div class="stats">
-                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/forks') }}">Top Forked on
-                                        GitHub</a>
+                                    <i class="ti-stats-up"></i> <a href="{{ url('/graphics/forks') }}">Top Forked</a>
                                 </div>
                             </div>
                         </div>

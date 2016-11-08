@@ -25,6 +25,18 @@
                     <p>Top 10 Forked</p>
                 </a>
             </li>
+            <li {!! request()->route()->getName() == 'trends-lang' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/trends-lang') }}">
+                    <i class="fa ti-stats-up"></i>
+                    <p>learning curve</p>
+                </a>
+            </li>
+            <li {!! request()->route()->getName() == 'learning' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/learning/actionscript') }}">
+                    <i class="fa ti-stats-down"></i>
+                    <p>learning language</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

@@ -5,11 +5,11 @@
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
-                    <div id="lc-lang" class="ct-chart"></div>
+                    <div id="lc-language" class="ct-chart"></div>
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i>source: GitHub and Stackoverflow
+                            <i class="ti-star"></i> Source: GitHub and Stackoverflow
                         </div>
                     </div>
                 </div>
@@ -21,14 +21,14 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            Highcharts.chart('lc-lang', {
-                colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
+            Highcharts.chart('lc-language', {
+                colors: ["#df5353"],
                 chart: {
                     backgroundColor: null,
-                    type: 'bar'
+                    type: 'spline'
                 },
                 title: {
-                    text: 'Trend Curve by Language - Top 15',
+                    text: 'Learning Curve - {{ $language->language['name'] }}',
                     style: {
                         fontSize: '16px',
                         fontWeight: 'bold',
@@ -36,13 +36,7 @@
                     }
                 },
                 tooltip: {
-                    headerFormat: '<span style="font-size:11px; color: {point.color}">{point.key}</span><br>',
-                    pointFormatter: function () {
-                        return Highcharts.numberFormat(this.y, 0, '', '.');
-                    },
-                    borderWidth: 0,
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    shadow: false
+                    enabled: false
                 },
                 legend: {
                     itemStyle: {
@@ -57,14 +51,14 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Languages'
+                        text: 'Base Acumulada'
                     },
                     labels: {
                         style: {
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $languages->map(function($lang) { return $lang->language['name']; }) !!}
+                    categories: {!! json_encode(array_map(function($lang) { return $lang['x']; }, $language->points)) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -72,7 +66,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Points per language<br><small style="text-transform: lowercase">(More points is better)</small>'
+                        text: '% de Aprendizado'
                     },
                     labels: {
                         style: {
@@ -89,7 +83,7 @@
                         dataLabels: {
                             enabled: true,
                             formatter: function () {
-                                return Highcharts.numberFormat(this.y, 0, '', '.');
+                                return Highcharts.numberFormat(this.point.value, 2, ',', '.');
                             }
                         }
                     }
@@ -99,9 +93,8 @@
                 },
 
                 series: [{
-                    name: 'Forks',
-                    colorByPoint: true,
-                    data: {!! $languages->map(function($lang) { return $lang->point; }) !!}
+                    name: 'Base Acumulada',
+                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'], 'value' => $lang['value']]; }, $language->points)) !!}
                 }]
             });
         });
