@@ -44,6 +44,10 @@
     z-index: 1;
     min-height: 130px;
 
+    &.no-footer {
+      min-height: 90px;
+    }
+
     .image{
         width: 100%;
         overflow: hidden;
