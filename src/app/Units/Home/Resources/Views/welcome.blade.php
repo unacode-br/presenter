@@ -74,21 +74,21 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                  <div class="card card-purple">
+                    <div class="icon">
+                      <i class="pe-7s-graph3"></i>
+                    </div>
+                    <h4>Curva de Aprendizado</h4>
+                    <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
                     <div class="card card-purple">
                         <div class="icon">
                             <i class="pe-7s-usb"></i>
                         </div>
                         <h4>Top Forks</h4>
                         <p>Veja os repositórios mais forkados do Github.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-purple">
-                        <div class="icon">
-                            <i class="pe-7s-graph3"></i>
-                        </div>
-                        <h4>Curva de Aprendizado</h4>
-                        <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
                     </div>
                 </div>
             </div>
