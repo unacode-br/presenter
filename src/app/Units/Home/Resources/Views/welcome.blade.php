@@ -51,10 +51,8 @@
                     <div class="description text-center">
                         <h2>StackHub</small></h2>
                         <br>
-                        <h5>PlayIT! will become your favorite. It offers a list of features long enough that we could
-                            sit here talking about it all day. But, if you're serious about your music, you should
-                            definitely take a look. Find us one every market!</h5>
-                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Sign in</a>
+                        <h5>Bem-vindo ao StackHub! Logue-se e confira as estatísticas das linguagens e frameworks mais utilizados no Github e StackOverflow e suas curvas de aprendizado.  </h5>
+                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Logar</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +60,7 @@
     </div>
     <div class="section section-features">
         <div class="container">
-            <h4 class="header-text text-center">Features</h4>
+            <h4 class="header-text text-center">Funcionalidades</h4>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card card-purple">
@@ -70,9 +68,8 @@
                             <i class="pe-7s-star"></i>
                         </div>
                         <div class="text">
-                            <h4>Top Stars</h4>
-                            <p>All appointments sync with your Google calendar so your availability is always up to
-                                date. See your schedule at a glance from any device.</p>
+                            <h4>Top Favoritos</h4>
+                            <p>Confira as tecnologias mais favoritadas do Github.</p>
                         </div>
                     </div>
                 </div>
@@ -82,8 +79,7 @@
                             <i class="pe-7s-usb"></i>
                         </div>
                         <h4>Top Forks</h4>
-                        <p>Automatic text and email reminders make sure customers always remember their upcoming
-                            appointments.</p>
+                        <p>Veja os repositórios mais forkados do Github.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -91,9 +87,8 @@
                         <div class="icon">
                             <i class="pe-7s-graph3"></i>
                         </div>
-                        <h4>Learning Curve</h4>
-                        <p>Take payments and run your business on the go, in your store and then see how it all adds up
-                            with analytics.</p>
+                        <h4>Curva de Aprendizado</h4>
+                        <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
                     </div>
                 </div>
             </div>
@@ -107,35 +102,35 @@
                     <div class="mask" id="varpa"></div>
                     <div class="desription text-center">
                         <h5>Cinthia Silman</h5>
-                        <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                        <p>"Documentação, implementação e teste"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Leandro"></div>
                     <div class="desription text-center">
                         <h5>Leandro Cazarini </h5>
-                        <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                        <p>"Documentação, implementação e teste"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Jordana"></div>
                     <div class="desription text-center">
                         <h5>Jordana Nogueira</h5>
-                        <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                        <p>"Desenvolvimento"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Gustavo"></div>
                     <div class="desription text-center">
                         <h5>Gustavo Marttos</h5>
-                        <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                        <p>"Desenvolvimento"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Taynara"></div>
                     <div class="desription text-center">
                         <h5>Taynara Sene</h5>
-                        <p>"I absolutely love your app! It's truly amazing and looks awesome!"</p>
+                        <p>"Desenvolvimento"</p>
                     </div>
                 </div>
             </div>
