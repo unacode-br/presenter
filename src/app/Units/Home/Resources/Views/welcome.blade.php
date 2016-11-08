@@ -141,10 +141,6 @@
             <div class="parallax-background">
                 <img class="parallax-background-image flipped" src="img/bg.jpeg">
             </div>
-            <div class="info">
-                <h1>Download this landing page for free!</h1>
-                <p>Beautiful multipurpose bootstrap landing page.</p>
-            </div>
         </div>
     </div>
     <footer class="footer">
