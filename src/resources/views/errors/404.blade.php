@@ -14,8 +14,8 @@
         <div class="container">
             <div class="content text-center" style="margin-top:10%">
               <div style="color:#fff">
-                  <h2>Ops!!</h2>
-                 A página que você tentou acessar não existe, <a href="/">click aqui</a> para voltar :)
+                  <h2>Ops!</h2>
+                 A página que você tentou acessar não existe, <a href="{{ url('home') }}" class="text-muted">clique aqui</a> para voltar. :)
                </div>
                 <img src="../../img/404.png" alt="not found"/>
             </div>
