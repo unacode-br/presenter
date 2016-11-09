@@ -2,6 +2,7 @@
 
 namespace App\Units\Home\Http\Controllers;
 
+use App\Domains\Graphics\LearningCurve;
 use Codecasts\Support\Http\Controller;
 
 /**
@@ -24,6 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home::home');
+        $random = mt_rand(0, LearningCurve::count() - 1);
+
+        $language = LearningCurve::skip($random)->first();
+
+        return view('home::home', compact(['random', 'language']));
     }
 }

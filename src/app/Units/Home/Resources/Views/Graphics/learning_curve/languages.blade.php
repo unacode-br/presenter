@@ -1,5 +1,7 @@
 @extends('core::template.layout.app')
 
+@section('title', 'Trending Languages')
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -9,7 +11,7 @@
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i>source: GitHub and Stackoverflow
+                            <i class="ti-star"></i> Sources: GitHub and StackOverflow
                         </div>
                     </div>
                 </div>

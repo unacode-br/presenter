@@ -51,8 +51,9 @@
                     <div class="description text-center">
                         <h2>StackHub</small></h2>
                         <br>
-                        <h5>Bem-vindo ao StackHub! Logue-se e confira as estatísticas das linguagens e frameworks mais utilizados no Github e StackOverflow e suas curvas de aprendizado.  </h5>
-                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Logar</a>
+                        <h5>Bem-vindo ao StackHub! Logue-se e confira as estatísticas das linguagens e frameworks mais
+                            utilizados no Github e StackOverflow e suas curvas de aprendizado. </h5>
+                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Entrar</a>
                     </div>
                 </div>
             </div>
@@ -76,19 +77,20 @@
                 <div class="col-md-4">
                     <div class="card card-purple">
                         <div class="icon">
-                            <i class="pe-7s-usb"></i>
+                            <i class="pe-7s-graph3"></i>
                         </div>
-                        <h4>Top Forks</h4>
-                        <p>Veja os repositórios mais forkados do Github.</p>
+                        <h4>Curva de Aprendizado</h4>
+                        <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no
+                            Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-purple">
                         <div class="icon">
-                            <i class="pe-7s-graph3"></i>
+                            <i class="pe-7s-usb"></i>
                         </div>
-                        <h4>Curva de Aprendizado</h4>
-                        <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
+                        <h4>Top Forks</h4>
+                        <p>Veja os repositórios mais forkados do Github.</p>
                     </div>
                 </div>
             </div>
@@ -140,10 +142,6 @@
         <div class="parallax filter-gradient purple" data-color="purple">
             <div class="parallax-background">
                 <img class="parallax-background-image flipped" src="img/bg.jpeg">
-            </div>
-            <div class="info">
-                <h1>Download this landing page for free!</h1>
-                <p>Beautiful multipurpose bootstrap landing page.</p>
             </div>
         </div>
     </div>

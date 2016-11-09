@@ -10,7 +10,7 @@
             <li {!! request()->route()->getName() == 'dashboard' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/home') }}">
                     <i class="fa fa-dashboard"></i>
-                    <p>Início</p>
+                    <p>Dashboard</p>
                 </a>
             </li>
             <li {!! request()->route()->getName() == 'trends.stars' ? 'class="active"' : '' !!}>
@@ -28,13 +28,13 @@
             <li {!! request()->route()->getName() == 'trends-lang' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/graphics/trends-lang') }}">
                     <i class="fa ti-stats-up"></i>
-                    <p>learning curve</p>
+                    <p>Trending Languages</p>
                 </a>
             </li>
             <li {!! request()->route()->getName() == 'learning' ? 'class="active"' : '' !!}>
-                <a href="{{ url('/graphics/learning/actionscript') }}">
+                <a href="{{ url('/graphics/learning') }}">
                     <i class="fa ti-stats-down"></i>
-                    <p>learning language</p>
+                    <p>Learning Curve</p>
                 </a>
             </li>
         </ul>

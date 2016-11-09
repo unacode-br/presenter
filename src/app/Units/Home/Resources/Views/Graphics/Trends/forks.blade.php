@@ -1,5 +1,7 @@
 @extends('core::template.layout.app')
 
+@section('title', 'Top 10 Forked')
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -9,7 +11,7 @@
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i>source: GitHub
+                            <i class="ti-star"></i> Source: GitHub Trends
                         </div>
                     </div>
                 </div>
