@@ -4,10 +4,70 @@
 
 @section('content')
     <div class="row">
+        <div class="col-lg-2 col-sm-12">
+            <div class="card no-footer">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group-sm">
+                                <label class="control-label" for="language">Technology</label>
+                                <select name="language" id="language" class="select form-control">
+                                    @foreach($languages as $lang)
+                                        <option value="{{ $lang->language['slug'] }}"{{ $lang->language['slug'] == $language->language['slug'] ? ' selected="selected"' : '' }}>{{ $lang->language['name'] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-12">
+            <div class="card no-footer">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="icon-big icon-primary">
+                                <i class="ti-github"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="numbers">
+                                <p>analyzed repositories</p>
+                                {{ $language->language['repositories']['total'] }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-12">
+            <div class="card no-footer">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="icon-big icon-warning">
+                                <i class="ti-stack-overflow"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="numbers">
+                                <p>analyzed questions / score</p>
+                                {{ $language->tag['counter'] }} / {{ $language->tag['score'] }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
                     <div id="lc-language" class="ct-chart"></div>
+
                     <div class="footer">
                         <hr>
                         <div class="stats">
@@ -23,6 +83,14 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
+            var curr_url = '{{ url()->route('learning') }}/';
+
+            $('#language').on('change', function() {
+                var language = $(this).find(':selected').val();
+
+                window.location.href = curr_url + language;
+            });
+
             Highcharts.chart('lc-language', {
                 colors: ["#df5353"],
                 chart: {
@@ -38,7 +106,14 @@
                     }
                 },
                 tooltip: {
-                    enabled: false
+                    headerFormat: '<span style="font-size:11px; color: {point.color}">{series.name}</span><br>',
+                    pointFormatter: function () {
+                        return 'Melhoramento: <b>' + Highcharts.numberFormat(this.y, 2, ',', '.') + '%</b><br>'
+                                + 'Aproveitamento: <b>' + Highcharts.numberFormat(this.value, 2, ',', '.') + '</b>';
+                    },
+                    borderWidth: 0,
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    shadow: false
                 },
                 legend: {
                     itemStyle: {
@@ -96,7 +171,7 @@
 
                 series: [{
                     name: 'Base Acumulada',
-                    data: {!! json_encode(array_reverse(array_map(function($lang) { return ['y' => $lang['y'], 'value' => $lang['value']]; }, $language->points))) !!}
+                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'] * 100, 'value' => $lang['value']]; }, $language->points)) !!}
                 }]
             });
         });

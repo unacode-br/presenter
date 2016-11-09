@@ -22,9 +22,10 @@ class GraphicsController extends Controller
     public function showGraphicsLearningCurve($language = 'actionscript')
     {
         $language = LearningCurve::where('language.slug', strtolower($language))->first();
+        $languages = LearningCurve::orderBy('language.slug', 'asc')->get(['language.slug', 'language.name']);
 
         if ($language) {
-            return view('home::Graphics.learning_curve.language', compact(['language']));
+            return view('home::Graphics.learning_curve.language', compact(['language', 'languages']));
         }
 
         abort(404);
