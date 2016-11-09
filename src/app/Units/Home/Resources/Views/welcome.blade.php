@@ -53,7 +53,7 @@
                         <br>
                         <h5>Bem-vindo ao StackHub! Logue-se e confira as estatísticas das linguagens e frameworks mais
                             utilizados no Github e StackOverflow e suas curvas de aprendizado. </h5>
-                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Logar</a>
+                        <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Entrar</a>
                     </div>
                 </div>
             </div>
