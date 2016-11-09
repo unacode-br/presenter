@@ -123,7 +123,7 @@
                             <div class="footer">
                                 <hr>
                                 <div class="stats">
-                                    <a href="{{ url('learning', $language->language['slug']) }}">
+                                    <a href="{{ route('learning', $language->language['slug']) }}">
                                         <i class="ti-reload"></i> View details
                                     </a>
                                 </div>
