@@ -127,8 +127,8 @@
                 tooltip: {
                     headerFormat: '<span style="font-size:11px; color: {point.color}">{series.name}</span><br>',
                     pointFormatter: function () {
-                        return 'Melhoramento: <b>' + Highcharts.numberFormat(this.y, 2, ',', '.') + '%</b><br>'
-                                + 'Aproveitamento: <b>' + Highcharts.numberFormat(this.value, 2, ',', '.') + '</b>';
+                        return 'Improvement: <b>' + Highcharts.numberFormat(this.y, 2, ',', '.') + '%</b><br>'
+                                + 'Exploitation: <b>' + Highcharts.numberFormat(this.value, 2, ',', '.') + '</b>';
                     },
                     borderWidth: 0,
                     backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -147,7 +147,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Base Acumulada'
+                        text: 'Accumulated base'
                     },
                     labels: {
                         style: {
@@ -162,7 +162,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: '% de Aprendizado'
+                        text: '% of Learning'
                     },
                     labels: {
                         style: {
@@ -189,7 +189,7 @@
                 },
 
                 series: [{
-                    name: 'Base Acumulada',
+                    name: 'Accumulated base',
                     data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'] * 100, 'value' => $lang['value']]; }, $language->points)) !!}
                 }]
             });
