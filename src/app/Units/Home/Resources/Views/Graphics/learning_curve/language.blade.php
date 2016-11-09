@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-5 col-sm-12">
+        <div class="col-lg-4 col-sm-12">
             <div class="card no-footer">
                 <div class="content">
                     <div class="row">
@@ -41,19 +41,38 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-5 col-sm-12">
+        <div class="col-lg-4 col-sm-12">
             <div class="card no-footer">
                 <div class="content">
                     <div class="row">
-                        <div class="col-xs-3">
+                        <div class="col-xs-2">
                             <div class="icon-big icon-warning">
                                 <i class="ti-stack-overflow"></i>
                             </div>
                         </div>
-                        <div class="col-xs-9">
+                        <div class="col-xs-10">
                             <div class="numbers">
                                 <p>analyzed questions / score</p>
                                 {{ $language->tag['counter'] }} / {{ $language->tag['score'] }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-12">
+            <div class="card no-footer">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="icon-big icon-danger">
+                                <i class="ti-pulse"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="numbers">
+                                <p>proportion</p>
+                                {{ number_format($proportion, 2, ',', '.') }}
                             </div>
                         </div>
                     </div>

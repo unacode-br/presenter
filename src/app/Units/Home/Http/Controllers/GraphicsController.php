@@ -25,7 +25,9 @@ class GraphicsController extends Controller
         $languages = LearningCurve::orderBy('language.slug', 'asc')->get(['language.slug', 'language.name']);
 
         if ($language) {
-            return view('home::Graphics.learning_curve.language', compact(['language', 'languages']));
+            $proportion = $language->points[0]['value'] / $language->points[1]['value'];
+
+            return view('home::Graphics.learning_curve.language', compact(['language', 'languages', 'proportion']));
         }
 
         abort(404);
