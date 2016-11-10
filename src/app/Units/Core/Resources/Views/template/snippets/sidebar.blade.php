@@ -40,7 +40,7 @@
             <li {!! request()->route()->getName() == 'frameworks' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/graphics/frameworks') }}">
                     <i class="fa ti-heart"></i>
-                    <p>Favourite Frameworks</p>
+                    <p>Favorite Frameworks</p>
                 </a>
             </li>
         </ul>
