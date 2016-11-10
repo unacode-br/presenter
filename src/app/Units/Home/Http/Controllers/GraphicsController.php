@@ -2,6 +2,7 @@
 
 namespace App\Units\Home\Http\Controllers;
 
+use App\Domains\Graphics\FrameworkRadar;
 use App\Domains\Graphics\LearningCurve;
 use App\Domains\Graphics\LearningCurveAll;
 use App\Domains\Graphics\Trend;
@@ -47,4 +48,10 @@ class GraphicsController extends Controller
         return view('home::Graphics.Trends.forks', compact(['repositories']));
     }
 
+    public function showGraphicsFrameworks()
+    {
+        $radar = FrameworkRadar::where('counter', '>', 0)->orderBy('sequence', 'asc')->take(15)->get();
+
+        return view('home::Graphics.radar', compact(['radar']));
+    }
 }
