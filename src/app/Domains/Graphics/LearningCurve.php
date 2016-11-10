@@ -2,9 +2,7 @@
 
 namespace App\Domains\Graphics;
 
-use App\Domains\Graphics\Presenters\LearningCurvePresenter;
 use Jenssegers\Mongodb\Eloquent\Model;
-use Codecasts\Presenter\Presentable;
 
 class LearningCurve extends Model
 {
