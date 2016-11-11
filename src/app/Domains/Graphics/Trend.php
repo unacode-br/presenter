@@ -48,17 +48,21 @@ class Trend extends Model
      */
     public static function getMostStaredRepositories($limit = 10)
     {
-        $star = Trend::orderBy('stars', 'desc')
-            ->take($limit)
-            ->get([
-                'repository',
-                'language',
-                'stars',
-            ]);
+        $stared = \Redis::get('graphic:stared');
 
-        \Redis::set('star', $star);
+        if ($stared == null) {
+            $star = Trend::orderBy('stars', 'desc')
+                ->take($limit)
+                ->get([
+                    'repository',
+                    'language',
+                    'stars',
+                ]);
 
-        return collect(json_decode(\Redis::get('star')));
+            \Redis::set('graphic:stared', $star);
+        }
+
+        return collect(json_decode(\Redis::get('graphic:stared')));
     }
 
     /**
@@ -68,17 +72,21 @@ class Trend extends Model
      */
     public static function getMostForkedRepositories($limit = 10)
     {
-        $forked = Trend::orderBy('forks', 'desc')
-            ->take($limit)
-            ->get([
-                'repository',
-                'language',
-                'forks',
-            ]);
+        $forked = \Redis::get('graphic:forked');
 
-        \Redis::set('forked', $forked);
+        if ($forked == null) {
+            $forked = Trend::orderBy('forks', 'desc')
+                ->take($limit)
+                ->get([
+                    'repository',
+                    'language',
+                    'forks',
+                ]);
 
-        return collect(json_decode(\Redis::get('forked')));
+            \Redis::set('graphic:forked', $forked);
+        }
+
+        return collect(json_decode(\Redis::get('graphic:forked')));
 
     }
 }

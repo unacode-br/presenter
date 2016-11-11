@@ -1,6 +1,6 @@
 @extends('core::template.layout.app')
 
-@section('title', 'Learning Curve (' . $language->language['name'] . ')')
+@section('title', 'Learning Curve (' . $learning['language']->language->name . ')')
 
 @section('content')
     <div class="row">
@@ -12,8 +12,8 @@
                             <div class="form-group-sm">
                                 <label class="control-label" for="language">Technology</label>
                                 <select name="language" id="language" class="select form-control">
-                                    @foreach($languages as $lang)
-                                        <option value="{{ $lang->language['slug'] }}"{{ $lang->language['slug'] == $language->language['slug'] ? ' selected="selected"' : '' }}>{{ $lang->language['name'] }}</option>
+                                    @foreach($learning['languages'] as $lang)
+                                        <option value="{{ $lang->language->slug }}"{{ $lang->language->slug == $learning['language']->language->slug ? ' selected="selected"' : '' }}>{{ $lang->language->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -34,7 +34,7 @@
                         <div class="col-xs-9">
                             <div class="numbers">
                                 <p>analyzed repositories</p>
-                                {{ $language->language['repositories']['total'] }}
+                                {{ $learning['language']->language->repositories->total }}
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="col-xs-10">
                             <div class="numbers">
                                 <p>analyzed questions / score</p>
-                                {{ $language->tag['counter'] }} / {{ $language->tag['score'] }}
+                                {{ $learning['language']->tag->counter }} / {{ $learning['language']->tag->score }}
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                         <div class="col-xs-9">
                             <div class="numbers">
                                 <p>proportion</p>
-                                {{ number_format($proportion, 2, ',', '.') }}
+                                {{ number_format($learning['proportion'], 2, ',', '.') }}
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                     type: 'spline'
                 },
                 title: {
-                    text: 'Learning Curve - {{ $language->language['name'] }}',
+                    text: 'Learning Curve - {{ $learning['language']->language->name }}',
                     style: {
                         fontSize: '16px',
                         fontWeight: 'bold',
@@ -154,7 +154,7 @@
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! json_encode(array_map(function($lang) { return $lang['x']; }, $language->points)) !!}
+                    categories: {!! json_encode(array_map(function($lang) { return $lang->x; }, $learning['language']->points)) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -190,7 +190,7 @@
 
                 series: [{
                     name: 'Accumulated base',
-                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang['y'] * 100, 'value' => $lang['value']]; }, $language->points)) !!}
+                    data: {!! json_encode(array_map(function($lang) { return ['y' => $lang->y * 100, 'value' => $lang->value]; }, $learning['language']->points)) !!}
                 }]
             });
         });

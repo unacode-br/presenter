@@ -45,15 +45,20 @@ class LearningCurveAll extends Model
      */
     public static function getTopLanguages($limit = 15)
     {
-        $curve = LearningCurveAll::orderBy('point', 'desc')
-            ->take($limit)
-            ->get([
-                'language.name',
-                'point',
-            ]);
+        $trending = \Redis::get('graphic.trending');
 
-        \Redis::set('curve', $curve);
+        if ($trending == null) {
+            $curve = LearningCurveAll::orderBy('point', 'desc')
+                ->take($limit)
+                ->get([
+                    'language.name',
+                    'point',
+                ]);
 
-        return collect(json_decode(\Redis::get('curve')));
+            \Redis::set('graphic:trending', $curve);
+
+        }
+
+        return collect(json_decode(\Redis::get('graphic:trending')));
     }
 }
