@@ -20,4 +20,17 @@ class FrameworkRadar extends Model
      */
     protected $fillable = ['slug', 'name', 'counter'];
 
+    public static function getTrendingFrameworks()
+    {
+        $radar = \Redis::get('graphic:radar');
+
+        if ($radar == null) {
+            $radar = FrameworkRadar::where('counter', '>', 0)->orderBy('sequence', 'asc')->take(15)->get();
+
+            \Redis::set('graphic:radar', $radar);
+        }
+
+        return collect(json_decode($radar));
+    }
+
 }

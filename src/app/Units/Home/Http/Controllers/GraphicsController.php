@@ -48,7 +48,7 @@ class GraphicsController extends Controller
 
     public function showGraphicsFrameworks()
     {
-        $radar = FrameworkRadar::where('counter', '>', 0)->orderBy('sequence', 'asc')->take(15)->get();
+        $radar = FrameworkRadar::getTrendingFrameworks();
 
         return view('home::Graphics.radar', compact(['radar']));
     }
