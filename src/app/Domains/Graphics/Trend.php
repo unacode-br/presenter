@@ -5,6 +5,7 @@ namespace App\Domains\Graphics;
 use App\Domains\Graphics\Presenters\TrendPresenter;
 use Jenssegers\Mongodb\Eloquent\Model;
 use Codecasts\Presenter\Presentable;
+use Cache;
 
 class Trend extends Model
 {
@@ -47,13 +48,21 @@ class Trend extends Model
      */
     public static function getMostStaredRepositories($limit = 10)
     {
-        return Trend::orderBy('stars', 'desc')
-            ->take($limit)
-            ->get([
-                'repository',
-                'language',
-                'stars',
-            ]);
+        $stared = \Redis::get('graphic:stared');
+
+        if ($stared == null) {
+            $star = Trend::orderBy('stars', 'desc')
+                ->take($limit)
+                ->get([
+                    'repository',
+                    'language',
+                    'stars',
+                ]);
+
+            \Redis::set('graphic:stared', $star);
+        }
+
+        return collect(json_decode(\Redis::get('graphic:stared')));
     }
 
     /**
@@ -63,12 +72,21 @@ class Trend extends Model
      */
     public static function getMostForkedRepositories($limit = 10)
     {
-        return Trend::orderBy('forks', 'desc')
-            ->take($limit)
-            ->get([
-                'repository',
-                'language',
-                'forks',
-            ]);
+        $forked = \Redis::get('graphic:forked');
+
+        if ($forked == null) {
+            $forked = Trend::orderBy('forks', 'desc')
+                ->take($limit)
+                ->get([
+                    'repository',
+                    'language',
+                    'forks',
+                ]);
+
+            \Redis::set('graphic:forked', $forked);
+        }
+
+        return collect(json_decode(\Redis::get('graphic:forked')));
+
     }
 }

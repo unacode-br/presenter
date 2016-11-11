@@ -1,17 +1,17 @@
 @extends('core::template.layout.app')
 
-@section('title', 'Trending Languages')
+@section('title', 'Favorite Languages')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
-                    <div id="lc-lang" class="ct-chart"></div>
+                    <div id="tiobe" class="ct-chart"></div>
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i> Sources: GitHub and StackOverflow
+                            <i class="ti-star"></i> Sources: TIOBE Index
                         </div>
                     </div>
                 </div>
@@ -23,14 +23,14 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            Highcharts.chart('lc-lang', {
+            Highcharts.chart('tiobe', {
                 colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
                 chart: {
                     backgroundColor: null,
-                    type: 'bar'
+                    type: 'column'
                 },
                 title: {
-                    text: 'Trend Curve by Language - Top 15',
+                    text: 'Favorite Languages',
                     style: {
                         fontSize: '16px',
                         fontWeight: 'bold',
@@ -40,7 +40,7 @@
                 tooltip: {
                     headerFormat: '<span style="font-size:11px; color: {point.color}">{point.key}</span><br>',
                     pointFormatter: function () {
-                        return Highcharts.numberFormat(this.y, 0, '', '.');
+                        return Highcharts.numberFormat(this.y, 2, ',', '.') + '%';
                     },
                     borderWidth: 0,
                     backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -62,11 +62,12 @@
                         text: 'Languages'
                     },
                     labels: {
+                        rotation: -45,
                         style: {
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $languages->map(function($lang) { return $lang->language->name; }) !!}
+                    categories: {!! $languages->map(function($lang) { return $lang->language; }) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -74,7 +75,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Points per language<br><small style="text-transform: lowercase">(More points is better)</small>'
+                        text: 'Raiting'
                     },
                     labels: {
                         style: {
@@ -91,7 +92,7 @@
                         dataLabels: {
                             enabled: true,
                             formatter: function () {
-                                return Highcharts.numberFormat(this.y, 0, '', '.');
+                                return Highcharts.numberFormat(this.y, 2, ',', '.') + '%';
                             }
                         }
                     }
@@ -103,7 +104,7 @@
                 series: [{
                     name: 'Forks',
                     colorByPoint: true,
-                    data: {!! $languages->map(function($lang) { return $lang->point; }) !!}
+                    data: {!! $languages->map(function($lang) { return $lang->rating * 100; }) !!}
                 }]
             });
         });

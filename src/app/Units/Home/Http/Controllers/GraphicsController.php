@@ -2,6 +2,8 @@
 
 namespace App\Units\Home\Http\Controllers;
 
+use App\Domains\Graphics\FrameworkRadar;
+use App\Domains\Graphics\LanguagesIndex;
 use App\Domains\Graphics\LearningCurve;
 use App\Domains\Graphics\LearningCurveAll;
 use App\Domains\Graphics\Trend;
@@ -21,16 +23,13 @@ class GraphicsController extends Controller
 
     public function showGraphicsLearningCurve($language = 'actionscript')
     {
-        $language = LearningCurve::where('language.slug', strtolower($language))->first();
-        $languages = LearningCurve::orderBy('language.slug', 'asc')->get(['language.slug', 'language.name']);
+        $learning = LearningCurve::getLearningCurveByLanguage($language);
 
-        if ($language) {
-            $proportion = $language->points[0]['value'] / $language->points[1]['value'];
-
-            return view('home::Graphics.learning_curve.language', compact(['language', 'languages', 'proportion']));
+        if (!$learning) {
+            abort(404);
         }
 
-        abort(404);
+        return view('home::Graphics.learning_curve.language', compact(['learning']));
     }
 
     public function showGraphicsStars()
@@ -47,4 +46,17 @@ class GraphicsController extends Controller
         return view('home::Graphics.Trends.forks', compact(['repositories']));
     }
 
+    public function showGraphicsFrameworks()
+    {
+        $radar = FrameworkRadar::getTrendingFrameworks();
+
+        return view('home::Graphics.radar', compact(['radar']));
+    }
+
+    public function showGraphicsLanguages()
+    {
+        $languages = LanguagesIndex::getIndexedLanguages();
+
+        return view('home::Graphics.tiobe', compact(['languages']));
+    }
 }
