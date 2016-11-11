@@ -29,4 +29,17 @@ class LanguagesIndex extends Model
         'rating' => 'float',
     ];
 
+    public static function getIndexedLanguages()
+    {
+        $langs = \Redis::get('graphic:tiobe');
+
+        if ($langs == null) {
+            $langs = LanguagesIndex::orderBy('sequence', 'asc')->get();
+
+            \Redis::set('graphic:tiobe', $langs);
+        }
+
+        return collect(json_decode(\Redis::get('graphic:tiobe')));
+    }
+
 }

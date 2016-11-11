@@ -55,7 +55,7 @@ class GraphicsController extends Controller
 
     public function showGraphicsLanguages()
     {
-        $languages = LanguagesIndex::orderBy('sequence', 'asc')->get();
+        $languages = LanguagesIndex::getIndexedLanguages();
 
         return view('home::Graphics.tiobe', compact(['languages']));
     }
