@@ -45,11 +45,13 @@ class LearningCurveAll extends Model
      */
     public static function getTopLanguages($limit = 15)
     {
-        return LearningCurveAll::orderBy('point', 'desc')
+        $curve = LearningCurveAll::orderBy('point', 'desc')
             ->take($limit)
             ->get([
                 'language.name',
                 'point',
             ]);
+        \Redis::set('curve', $curve);
+        return collect(json_decode(\Redis::get('curve')));   
     }
 }
