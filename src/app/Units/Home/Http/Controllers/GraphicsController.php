@@ -3,6 +3,7 @@
 namespace App\Units\Home\Http\Controllers;
 
 use App\Domains\Graphics\FrameworkRadar;
+use App\Domains\Graphics\LanguagesIndex;
 use App\Domains\Graphics\LearningCurve;
 use App\Domains\Graphics\LearningCurveAll;
 use App\Domains\Graphics\Trend;
@@ -53,5 +54,12 @@ class GraphicsController extends Controller
         $radar = FrameworkRadar::where('counter', '>', 0)->orderBy('sequence', 'asc')->take(15)->get();
 
         return view('home::Graphics.radar', compact(['radar']));
+    }
+
+    public function showGraphicsLanguages()
+    {
+        $languages = LanguagesIndex::orderBy('sequence', 'asc')->get();
+
+        return view('home::Graphics.tiobe', compact(['languages']));
     }
 }

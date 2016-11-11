@@ -25,22 +25,28 @@
                     <p>Top 10 Forked</p>
                 </a>
             </li>
-            <li {!! request()->route()->getName() == 'trends-lang' ? 'class="active"' : '' !!}>
-                <a href="{{ url('/graphics/trends-lang') }}">
-                    <i class="fa ti-stats-up"></i>
-                    <p>Trending Languages</p>
-                </a>
-            </li>
             <li {!! request()->route()->getName() == 'learning' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/graphics/learning') }}">
                     <i class="fa ti-stats-down"></i>
                     <p>Learning Curve</p>
                 </a>
             </li>
+            <li {!! request()->route()->getName() == 'trends-lang' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/trends-lang') }}">
+                    <i class="fa ti-stats-up"></i>
+                    <p>Trending Languages</p>
+                </a>
+            </li>
             <li {!! request()->route()->getName() == 'frameworks' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/graphics/frameworks') }}">
                     <i class="fa ti-heart"></i>
                     <p>Favorite Frameworks</p>
+                </a>
+            </li>
+            <li {!! request()->route()->getName() == 'languages' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/languages') }}">
+                    <i class="fa ti-light-bulb"></i>
+                    <p>Favorite Languages</p>
                 </a>
             </li>
         </ul>
