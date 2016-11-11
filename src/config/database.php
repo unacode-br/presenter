@@ -119,7 +119,7 @@ return [
 
     'redis' => [
 
-        'cluster' => false,
+        'cluster' => 'predis',
 
         'default' => [
             'host'     => env('REDIS_HOST', 'localhost'),

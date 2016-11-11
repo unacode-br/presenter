@@ -194,6 +194,11 @@ return [
         App\Units\Auth\Providers\UnitServiceProvider::class,
         App\Units\Home\Providers\UnitServiceProvider::class,
 
+        /**
+         * Debug 
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
@@ -241,6 +246,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

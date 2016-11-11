@@ -5,6 +5,7 @@ namespace App\Domains\Graphics;
 use App\Domains\Graphics\Presenters\TrendPresenter;
 use Jenssegers\Mongodb\Eloquent\Model;
 use Codecasts\Presenter\Presentable;
+use Cache;
 
 class Trend extends Model
 {
@@ -46,14 +47,16 @@ class Trend extends Model
      * @return mixed
      */
     public static function getMostStaredRepositories($limit = 10)
-    {
-        return Trend::orderBy('stars', 'desc')
+    {                   
+        $star = Trend::orderBy('stars', 'desc')
             ->take($limit)
             ->get([
                 'repository',
                 'language',
                 'stars',
             ]);
+        \Redis::set('star', $star);
+        return collect(json_decode(\Redis::get('star')));        
     }
 
     /**
@@ -63,12 +66,15 @@ class Trend extends Model
      */
     public static function getMostForkedRepositories($limit = 10)
     {
-        return Trend::orderBy('forks', 'desc')
+        $forked = Trend::orderBy('forks', 'desc')
             ->take($limit)
             ->get([
                 'repository',
                 'language',
                 'forks',
             ]);
+        \Redis::set('forked', $forked);
+        return collect(json_decode(\Redis::get('forked')));        
+
     }
 }
