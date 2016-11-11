@@ -1,17 +1,17 @@
 @extends('core::template.layout.app')
 
-@section('title', 'Favorite Frameworks')
+@section('title', 'Favorite Languages')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
-                    <div id="radar" class="ct-chart"></div>
+                    <div id="tiobe" class="ct-chart"></div>
                     <div class="footer">
                         <hr>
                         <div class="stats">
-                            <i class="ti-star"></i> Sources: ThoughtWorks Radar and StackOverflow
+                            <i class="ti-star"></i> Sources: TIOBE Index
                         </div>
                     </div>
                 </div>
@@ -23,14 +23,14 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            Highcharts.chart('radar', {
+            Highcharts.chart('tiobe', {
                 colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
                 chart: {
                     backgroundColor: null,
-                    type: 'bar'
+                    type: 'column'
                 },
                 title: {
-                    text: 'Favorite Frameworks',
+                    text: 'Favorite Languages',
                     style: {
                         fontSize: '16px',
                         fontWeight: 'bold',
@@ -40,7 +40,7 @@
                 tooltip: {
                     headerFormat: '<span style="font-size:11px; color: {point.color}">{point.key}</span><br>',
                     pointFormatter: function () {
-                        return Highcharts.numberFormat(this.y, 0, '', '.');
+                        return Highcharts.numberFormat(this.y, 2, ',', '.') + '%';
                     },
                     borderWidth: 0,
                     backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -59,14 +59,15 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Frameworks'
+                        text: 'Languages'
                     },
                     labels: {
+                        rotation: -45,
                         style: {
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $radar->map(function($r) { return $r->name; }) !!}
+                    categories: {!! $languages->map(function($lang) { return $lang->language; }) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
@@ -74,7 +75,7 @@
                         style: {
                             textTransform: 'uppercase'
                         },
-                        text: 'Questions per Technology<br><small style="text-transform: lowercase">(More is better)</small>'
+                        text: 'Raiting'
                     },
                     labels: {
                         style: {
@@ -91,7 +92,7 @@
                         dataLabels: {
                             enabled: true,
                             formatter: function () {
-                                return Highcharts.numberFormat(this.y, 0, '', '.');
+                                return Highcharts.numberFormat(this.y, 2, ',', '.') + '%';
                             }
                         }
                     }
@@ -103,7 +104,7 @@
                 series: [{
                     name: 'Forks',
                     colorByPoint: true,
-                    data: {!! $radar->map(function($r) { return $r->counter; }) !!}
+                    data: {!! $languages->map(function($lang) { return $lang->rating * 100; }) !!}
                 }]
             });
         });
