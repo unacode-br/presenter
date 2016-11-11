@@ -66,7 +66,7 @@
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $languages->map(function($lang) { return $lang->language['name']; }) !!}
+                    categories: {!! $languages->map(function($lang) { return $lang->language->name; }) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',

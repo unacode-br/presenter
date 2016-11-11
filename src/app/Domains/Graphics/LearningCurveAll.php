@@ -51,7 +51,9 @@ class LearningCurveAll extends Model
                 'language.name',
                 'point',
             ]);
+
         \Redis::set('curve', $curve);
-        return collect(json_decode(\Redis::get('curve')));   
+
+        return collect(json_decode(\Redis::get('curve')));
     }
 }

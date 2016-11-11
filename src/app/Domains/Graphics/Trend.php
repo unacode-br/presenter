@@ -47,7 +47,7 @@ class Trend extends Model
      * @return mixed
      */
     public static function getMostStaredRepositories($limit = 10)
-    {                   
+    {
         $star = Trend::orderBy('stars', 'desc')
             ->take($limit)
             ->get([
@@ -55,8 +55,10 @@ class Trend extends Model
                 'language',
                 'stars',
             ]);
+
         \Redis::set('star', $star);
-        return collect(json_decode(\Redis::get('star')));        
+
+        return collect(json_decode(\Redis::get('star')));
     }
 
     /**
@@ -73,8 +75,10 @@ class Trend extends Model
                 'language',
                 'forks',
             ]);
+
         \Redis::set('forked', $forked);
-        return collect(json_decode(\Redis::get('forked')));        
+
+        return collect(json_decode(\Redis::get('forked')));
 
     }
 }
