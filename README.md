@@ -41,12 +41,12 @@ Certifique-se que você tenha o [Docker](https://www.docker.com/) e o [Docker Co
 
 Vá até a pasta `docker` e execute os comandos:
 
-- `docker-compose up -d nginx php-fpm mongo`
+- `docker-compose up -d nginx php-fpm mongo redis`
 - `docker-compose exec --user=laradock workspace bash`
 
 Dentro do container **workspace**, execute `composer install` para instalar todas as depêndencias do Composer.
 
-Altere o arquivo `.env` e adeque-o com as devidas configurações dos apps das redes socias (vide Slack).
+Altere o arquivo `.env` e adeque-o com as devidas configurações dos apps das redes sociais (Github, Facebook e Google).
 
 Acesse em seu navegador o IP do Docker.
 
