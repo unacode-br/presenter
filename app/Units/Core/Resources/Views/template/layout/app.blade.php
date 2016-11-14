@@ -10,7 +10,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css', request()->secure()) }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -32,6 +32,6 @@
     </div>
 </div>
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js', request()->secure()) }}"></script>
 @yield('scripts')
 </html>

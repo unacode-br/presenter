@@ -6,7 +6,7 @@
     <title>StackHub</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
-    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/landing.css', request()->secure()) }}" rel="stylesheet">
 </head>
 <body class="landing-page landing-page1">
 <nav class="navbar navbar-transparent navbar-top" role="navigation">
@@ -165,5 +165,5 @@
 </div>
 </body>
 <a href="#top" class="top hidden-xs"><i class="pe-7s-magnet"></i></a>
-<script src="{{ asset('js/landing.js') }}"></script>
+<script src="{{ asset('js/landing.js', request()->secure()) }}"></script>
 </html>

@@ -27,7 +27,7 @@
     <tr style="padding: 20px 0 30px 0;">
         <td style="color: gray; font-size: 12px; text-align: center;">
             Este e-mail foi gerado automaticamente pelo sistema -
-            <a href="http://docker.app/" style="color:#660F57">StackHub</a>
+            <a href="{{ url('/') }}" style="color:#660F57">StackHub</a>
         </td>
     </tr>
 </table>
