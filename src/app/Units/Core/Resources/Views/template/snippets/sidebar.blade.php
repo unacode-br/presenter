@@ -13,18 +13,6 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li {!! request()->route()->getName() == 'trends.stars' ? 'class="active"' : '' !!}>
-                <a href="{{ url('/graphics/stars') }}">
-                    <i class="fa fa-star"></i>
-                    <p>Top 10 Stared</p>
-                </a>
-            </li>
-            <li {!! request()->route()->getName() == 'trends.forks' ? 'class="active"' : '' !!}>
-                <a href="{{ url('/graphics/forks') }}">
-                    <i class="fa fa-code-fork"></i>
-                    <p>Top 10 Forked</p>
-                </a>
-            </li>
             <li {!! request()->route()->getName() == 'learning' ? 'class="active"' : '' !!}>
                 <a href="{{ url('/graphics/learning') }}">
                     <i class="fa ti-stats-down"></i>
@@ -35,6 +23,18 @@
                 <a href="{{ url('/graphics/trends-lang') }}">
                     <i class="fa ti-stats-up"></i>
                     <p>Trending Languages</p>
+                </a>
+            </li>
+            <li {!! request()->route()->getName() == 'trends.stars' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/stars') }}">
+                    <i class="fa fa-star"></i>
+                    <p>Top 10 Stared</p>
+                </a>
+            </li>
+            <li {!! request()->route()->getName() == 'trends.forks' ? 'class="active"' : '' !!}>
+                <a href="{{ url('/graphics/forks') }}">
+                    <i class="fa fa-code-fork"></i>
+                    <p>Top 10 Forked</p>
                 </a>
             </li>
             <li {!! request()->route()->getName() == 'frameworks' ? 'class="active"' : '' !!}>
