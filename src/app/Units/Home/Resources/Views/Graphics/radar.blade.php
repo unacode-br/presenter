@@ -66,7 +66,7 @@
                             fontSize: '12px'
                         }
                     },
-                    categories: {!! $radar->map(function($r) { return $r->name; }) !!}
+                    categories: {!! $radar->map(function($r) { return $r->name . ' - ' . str_pad($r->sequence, 2, 0, STR_PAD_LEFT); }) !!}
                 },
                 yAxis: {
                     minorTickInterval: 'auto',
