@@ -1,0 +1,56 @@
+#login{
+  background: url("../img/bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.login{
+  min-height: 260px;
+}
+
+@media (max-width: 991px){
+  #login{
+    background-size: auto;
+  }
+  .footer {
+    position: inherit;
+      .copyright {
+      color: #fff;
+    }
+  }
+}
+
+#main-login{
+  margin-top: 10%;
+}
+#footer-content > .footer {
+    z-index: 4;
+}
+footer{
+  width: 100%;
+}
+
+.text-login{
+  color: #fff !important ;
+}
+
+.navbar-right{
+  margin-right: 20px;
+}
+
+.logo-mobile{
+  color: #fff;
+}
+
+@media (max-width: 1300px){
+  .stats{  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 19px;      /* fallback */
+    -webkit-box-orient: vertical;
+  }
+}

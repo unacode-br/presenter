@@ -106,7 +106,7 @@ services:
     volumes_source:
         build: ./volumes/application
         volumes:
-            - ../src:/var/www/laravel
+            - ../:/var/www/laravel
 
 ### Databases Data Container ################################
 
