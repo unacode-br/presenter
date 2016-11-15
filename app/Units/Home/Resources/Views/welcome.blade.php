@@ -43,7 +43,7 @@
 <div class="wrapper">
     <div class="parallax filter-gradient purple" data-color="purple">
         <div class="parallax-background">
-            <img class="parallax-background-image" src="img/bg.jpeg">
+            <img class="parallax-background-image" src="img/bg.jpg">
         </div>
         <div class="container">
             <div class="row">
