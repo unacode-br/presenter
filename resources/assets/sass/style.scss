@@ -1,5 +1,5 @@
 #login{
-  background: url("../img/bg.jpeg");
+  background: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,7 +45,7 @@ footer{
 }
 
 @media (max-width: 1300px){
-  .stats{  
+  .stats{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
