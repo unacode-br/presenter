@@ -25,23 +25,20 @@
         <div class="collapse navbar-collapse" id="example">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="https://www.facebook.com/stackhub">
-                        <i class="fa fa-facebook-square"></i>
-                        Like
-                    </a>
+                <a class="page-scroll" href="#about">O que é o StackHub</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/StackHub_">
-                        <i class="fa fa-twitter"></i>
-                        Tweet
-                    </a>
+                    <a class="page-scroll" href="#features">Funcionalidades</a>
                 </li>
+                <li>
+                    <a class="page-scroll" href="#team">Time</a>
+                </li>                
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </nav>
-<div class="wrapper">
+<div class="wrapper" id="about">
     <div class="parallax filter-gradient purple" data-color="purple">
         <div class="parallax-background">
             <img class="parallax-background-image" src="img/bg.jpg">
@@ -60,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="section section-features">
+    <div class="section section-features" id="features">
         <div class="container">
             <h4 class="header-text text-center">Funcionalidades</h4>
             <div class="row">
@@ -97,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class="section section-testimonial">
+    <div class="section section-testimonial" id="team">
         <div class="container">
             <h4 class="header-text text-center">Team</h4>
             <div class="carousel-inner">
