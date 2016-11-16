@@ -62,7 +62,7 @@ abstract class SocialController extends Controller
             'extras'      => [],
         ]);
 
-        //Mail::to($user)->send(new SendMail($user));
+        Mail::to($user)->send(new SendMail($user));
 
         return $user;
     }
