@@ -16,7 +16,7 @@
                     <small>Hub</small>
                 </h2>
                 <p >
-                    StackHub é uma ferramenta de data mining que mostrará ao usuário informações acerca das tecnologias
+                    StackHub é uma ferramenta de data science que mostrará ao usuário informações acerca das tecnologias
                     mais utilizadas no Github e StackOverflow. Ela mostrará o uso e o aprendizado dessas tecnologias,
                     para que os usuários possam através dessas informações, escolherem qual será a próxima tecnologia
                     que vale a pena investir!
