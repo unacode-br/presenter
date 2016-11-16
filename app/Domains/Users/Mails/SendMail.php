@@ -31,6 +31,8 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('core::template.email.send_email');
+        return $this->from('noreply@stackhub.herokuapp.com', 'Equipe StackHub')
+            ->subject('Seja bem vindo ao StackHub!')
+            ->view('core::template.email.send_email');
     }
 }
