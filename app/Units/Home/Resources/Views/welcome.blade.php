@@ -52,8 +52,9 @@
                     <div class="description text-center">
                         <h2>StackHub</small></h2>
                         <br>
-                        <h5>Bem-vindo ao StackHub! Logue-se e confira as estatísticas das linguagens e frameworks mais
-                            utilizados no Github e StackOverflow e suas curvas de aprendizado. </h5>
+                        <h5>Bem-vindo ao StackHub! Entre e confira nossos gráficos de curva de aprendizado e linha de
+                            tendência referente às linguagens de programação e frameworks mais utilizados com base nos
+                            dados do Github e Stackoverflow.</h5>
                         <a href="/login" class="btn btn-primary btn-lg btn-fill sign-in">Entrar</a>
                     </div>
                 </div>
@@ -70,8 +71,8 @@
                             <i class="pe-7s-star"></i>
                         </div>
                         <div class="text">
-                            <h4>Top Favoritos</h4>
-                            <p>Confira as tecnologias mais favoritadas do Github.</p>
+                            <h4>Mais Populares</h4>
+                            <p>Confira as tecnologias que estão em alta no Github!</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +82,8 @@
                             <i class="pe-7s-graph3"></i>
                         </div>
                         <h4>Curva de Aprendizado</h4>
-                        <p>Analise o nosso gráfico de curva de aprendizado de linguagens de programação utilizadas no
-                            Github e StackOverflow para medir a dificuldade de aprendizado dessas linguagens.</p>
+                        <p>Analise o nosso gráficos de curva de aprendizado e linha de tendência referente às linguagens
+                            de programação utilizadas no Github e StackOverflow.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -90,8 +91,8 @@
                         <div class="icon">
                             <i class="pe-7s-usb"></i>
                         </div>
-                        <h4>Top Forks</h4>
-                        <p>Veja os repositórios mais forkados do Github.</p>
+                        <h4>Com Mais Contribuições</h4>
+                        <p>Veja os repositórios com mais forks no Github.</p>
                     </div>
                 </div>
             </div>
@@ -119,30 +120,23 @@
                     <div class="mask" id="Jordana"></div>
                     <div class="description text-center">
                         <h5>Jordana Nogueira</h5>
-                        <p>"Desenvolvimento"</p>
+                        <p>"Desenvolvimento back-end e front-end"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Gustavo"></div>
                     <div class="description text-center">
                         <h5>Gustavo Marttos</h5>
-                        <p>"Desenvolvimento"</p>
+                        <p>"Desenvolvimento back-end e front-end"</p>
                     </div>
                 </div>
                 <div class="">
                     <div class="mask" id="Taynara"></div>
                     <div class="description text-center">
                         <h5>Taynara Sene</h5>
-                        <p>"Desenvolvimento"</p>
+                        <p>"Desenvolvimento back-end e front-end"</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="section section-no-padding">
-        <div class="parallax filter-gradient purple" data-color="purple">
-            <div class="parallax-background">
-                <img class="parallax-background-image flipped" src="img/bg.jpg">
             </div>
         </div>
     </div>
