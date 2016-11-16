@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Login Stackhub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body id="login">
