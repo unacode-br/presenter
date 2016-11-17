@@ -13,7 +13,7 @@
                                 <label class="control-label" for="language">Technology</label>
                                 <select name="language" id="language" class="select form-control">
                                     @foreach($learning['languages'] as $lang)
-                                        <option value="{{ urlencode($lang->language->slug) }}"{{ $lang->language->slug == $learning['language']->language->slug ? ' selected="selected"' : '' }}>{{ $lang->language->name }}</option>
+                                        <option value="{{ rawurlencode($lang->language->slug) }}"{{ $lang->language->slug == $learning['language']->language->slug ? ' selected="selected"' : '' }}>{{ $lang->language->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

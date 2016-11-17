@@ -23,7 +23,7 @@ class GraphicsController extends Controller
 
     public function showGraphicsLearningCurve($language = 'python')
     {
-        $learning = LearningCurve::getLearningCurveByLanguage(urldecode($language));
+        $learning = LearningCurve::getLearningCurveByLanguage(rawurldecode($language));
 
         if (!$learning) {
             abort(404);
