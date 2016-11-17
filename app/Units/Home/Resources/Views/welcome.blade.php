@@ -10,7 +10,7 @@
     <link href="{{ asset('css/landing.css', request()->secure()) }}" rel="stylesheet">
 </head>
 <body class="landing-page landing-page1">
-<nav class="navbar navbar-transparent navbar-top" role="navigation">
+<nav class="navbar navbar-transparent navbar-fixed-top" style="background-color:rgba(153, 51, 153,.8);" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <a class="page-scroll" href="#team">Time</a>
-                </li>                
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -97,7 +97,7 @@
     </div>
     <div class="section section-testimonial" id="team">
         <div class="container">
-            <h4 class="header-text text-center">Team</h4>
+            <h4 class="header-text text-center">Time</h4>
             <div class="carousel-inner">
                 <div class="">
                     <div class="mask" id="varpa"></div>
