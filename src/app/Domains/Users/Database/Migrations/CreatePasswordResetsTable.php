@@ -1,1 +1,0 @@
-database/migrations/2016_10_16_161545_create_password_resets_table.php

@@ -1,1 +1,0 @@
-database/migrations/2016_10_16_161223_create_users_table.php

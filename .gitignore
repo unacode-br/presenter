@@ -1,3 +1,13 @@
-.idea/
+/node_modules
+/public/storage
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+
+# temporary for support package development
+/support
+
 .phpintel/
 .DS_Store
