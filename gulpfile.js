@@ -17,5 +17,7 @@ require('laravel-elixir-vue');
      mix.sass('app.scss')
         .sass('landing.scss')
         .webpack('app.js')
-        .webpack('landing.js');
+        .webpack('landing.js')
+     	.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/*.*', 'public/fonts/bootstrap');
  });
+

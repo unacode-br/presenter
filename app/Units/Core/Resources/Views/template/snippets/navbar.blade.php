@@ -20,7 +20,10 @@
     <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="nav navbar-nav">
-            &nbsp;
+            <li id="tour">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span>Tour</span>                
+            </li>
         </ul>
 
         <!-- Right Side Of Navbar -->
