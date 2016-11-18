@@ -25,7 +25,7 @@
                 <h2><i class="ti-direction-alt"></i> Saiba Mais</h2>
             </div>
               <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  O TIOBE Index é uma lista ordenada das linguagens de programação que são classificadas pela frequencia que são pesquisadas na internet. O gráfico demonstra qual a procura dessas linguagens no mês corrente.
               </div>
           </div>
       </div>
