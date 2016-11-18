@@ -12910,6 +12910,7 @@ footer {
 
 #tour {
   margin: 10px 5px 11px 32px;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */
