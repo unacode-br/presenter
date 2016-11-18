@@ -55,12 +55,23 @@ footer{
   }
 }
 .popover-title {
-  background-color: #660f57 !important;
+  background-color: #660f57;
   color: #fff !important;
 }
 
-#tour{
+#tour {
   margin: 10px 5px 11px 32px;
   color:#fff;
   cursor: pointer;
+}
+
+.header{
+  i{
+    font-size: 50px;
+    color: #66615B;
+  }
+
+  h2{
+    color: #660f57;
+  }
 }

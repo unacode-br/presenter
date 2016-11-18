@@ -22,7 +22,13 @@
         <ul class="nav navbar-nav">
             <li id="tour">
                 <i class="glyphicon glyphicon-briefcase"></i>
-                <span>Tour</span>                
+                <span>Tour</span>
+            </li>
+            <li>
+              <a href="#about">
+                <i class="ti-direction-alt"></i>
+                <span>Saiba Mais</span>
+              </a>
             </li>
         </ul>
 
