@@ -124,3 +124,53 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
+
+// Instance the tour
+var tour = new Tour({
+  steps: [
+  {
+    element: "#dashboard",
+    title: "Dashboard",
+    content: "Aqui é o ponto de partida do sistema, todos os atalhos para os gráficos estão presentes nessa tela."
+  },
+  {
+    element: "#learning",
+    title: "Learning Curve",
+    content: "Esse é o gráfico que mostra as curvas de aprendizado referente a linguagem de programação escolhida."
+  },
+  {
+    element: "#trends-lang",
+    title: "Trending Languages",
+    content: "Esse é o gráfico de tendência de linguagens utilizadas em determinado período."
+  },
+  {
+    element: "#stars",
+    title: "Top 10 Stared",
+    content: "Esse é o gráfico de tecnologias que possuem maior popularidade no GitHub."
+  },
+  {
+    element: "#forks",
+    title: "Top 10 Forked",
+    content: "Esse é o gráfico de tecnologias que possuem mais contribuições no GitHub."
+  },
+  {
+    element: "#frameworks",
+    title: "Favorite Frameworks",
+    content: "Esse é o gráfico de frameworks que estão sendo mais utilizados no último mês."
+  },
+  {
+    element: "#languages",
+    title: "Favorite Languages",
+    content: "Esse é o gráfico das linguagens que estão sendo mais utilizadas no último mês."
+  },
+  {
+    element: "#logout",
+    title: "logout",
+    content: "Sair do sistema.",
+    placement: "bottom",
+   }
+]});
+
+$('#tour').click(function(){
+  tour.restart();
+})

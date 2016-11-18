@@ -97,6 +97,18 @@
             </div>
         </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card-graphic" id="about">
+            <div class="header">
+                <h2><i class="ti-direction-alt"></i> Saiba Mais</h2>
+            </div>
+              <div class="content">
+                  Utilizando os dados do Github e do StackOverflow, o gráfico <em>power law</em> demonstra a queda do grau de dificuldade ao longo das tentativas de aprendizado, confirmando o que Theodore Wright - engenheiro e matemático responsável pela teoria da Curva de Aprendizado - dizia a respeito de que "a cada carga de trabalho duplicada, o esforço requerido para realizá-la decai um valor percentual constante". Sendo assim, a quantidade de repositórios do Github, a quantidade de perguntas e pontos acumulados do Stackoverflow são fundidos, criando o cenário que para obter melhores resultados deve-se ter mais repositórios, menos perguntas e mais pontos acumulados.
+              </div>
+          </div>
+      </div>
+    </div>
 @endsection
 
 @section('scripts')

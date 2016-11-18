@@ -20,7 +20,16 @@
     <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="nav navbar-nav">
-            &nbsp;
+            <li id="tour">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span>Tour</span>
+            </li>
+            <li>
+              <a href="#about">
+                <i class="ti-direction-alt"></i>
+                <span>Saiba Mais</span>
+              </a>
+            </li>
         </ul>
 
         <!-- Right Side Of Navbar -->
@@ -32,7 +41,7 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
-                    <ul class="dropdown-menu" role="menu">
+                    <ul id="logout" class="dropdown-menu" role="menu">
                         <li>
                             <a href="{{ url('/logout') }}"
                                onclick="event.preventDefault();
