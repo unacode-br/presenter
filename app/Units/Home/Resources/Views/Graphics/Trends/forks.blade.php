@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="card-graphic">
                 <div class="content">
-                    <div id="forks" class="ct-chart"></div>
+                    <div id="ct-forks" class="ct-chart"></div>
                     <div class="footer">
                         <hr>
                         <div class="stats">
@@ -23,7 +23,7 @@
 @section('scripts')
     <script type="text/javascript">
         $(function () {
-            Highcharts.chart('forks', {
+            Highcharts.chart('ct-forks', {
                 colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798bf", "#aaeeee", "#a5aad9", "#2b908f", "#55bf3b", "#df5353", "#7798bf", "#aaeeee"],
                 chart: {
                     backgroundColor: null,
