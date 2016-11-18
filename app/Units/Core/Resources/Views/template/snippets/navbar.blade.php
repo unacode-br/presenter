@@ -24,12 +24,14 @@
                 <i class="glyphicon glyphicon-briefcase"></i>
                 <span>Tour</span>
             </li>
-            <li>
-              <a href="#about">
-                <i class="ti-direction-alt"></i>
-                <span>Saiba Mais</span>
-              </a>
-            </li>
+            @unless (request()->route()->getName() == 'dashboard')
+              <li>
+                <a href="#about">
+                  <i class="ti-direction-alt"></i>
+                  <span>Saiba Mais</span>
+                </a>
+              </li>
+            @endunless
         </ul>
 
         <!-- Right Side Of Navbar -->
