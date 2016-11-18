@@ -174,3 +174,4 @@ var tour = new Tour({
 $('#tour').click(function(){
   tour.restart();
 })
+
