@@ -25,7 +25,7 @@
                 <h2><i class="ti-direction-alt"></i> Saiba Mais</h2>
             </div>
               <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Mensalmente, a ThoughtWorks, uma das maiores consultorias em tecnologias do mundo, publica quais as tecnologias/frameworks que devem ser adotadas ou deixadas de lado com base no mercado. O gráfico traz essas tecnologias atreladas aos pontos que estas recebem nas perguntas do StackOverflow, apresentando o interessante da comunidade.
               </div>
           </div>
       </div>

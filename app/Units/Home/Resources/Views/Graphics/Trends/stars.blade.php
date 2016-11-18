@@ -25,7 +25,7 @@
                 <h2><i class="ti-direction-alt"></i> Saiba Mais</h2>
             </div>
               <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  O gráfico traz os dados do Github Trends, demonstrando quais são os repositórios que receberam mais estrelas em um determinado período, ou seja, os mais populares entre os usuários. Também é possível verificar a linguagem de programação utilizada por esses repositórios.
               </div>
           </div>
       </div>
