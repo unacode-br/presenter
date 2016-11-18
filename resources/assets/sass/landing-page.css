@@ -526,6 +526,10 @@ a:focus, a:active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.navbar-fixed-top{
+    background-color:rgba(153, 51, 153,.8);
+}
+
 .footer {
   background-color: white;
   line-height: 20px;
